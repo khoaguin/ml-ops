@@ -7,5 +7,5 @@ In this lab, you will use TFDV in order to:
 * Calculate, visualize and fix anomalies 
 
 ## Requirements
-tensorflow==2.6.0
+tensorflow==2.6.0  
 tensorflow_data_validation==1.3.0
