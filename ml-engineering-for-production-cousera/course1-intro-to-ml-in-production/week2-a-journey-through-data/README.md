@@ -1,4 +1,4 @@
-# Ungraded Lab - A Journey through Data
+# Lab: A Journey through Data
 
 ## Introduction
 In this lab, we will learn the importance of data in deep learning. More specifically, we will do these tasks:

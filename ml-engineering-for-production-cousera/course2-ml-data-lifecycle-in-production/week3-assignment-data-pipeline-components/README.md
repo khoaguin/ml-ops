@@ -1,4 +1,4 @@
-# Week 3 Assignment: Data Pipeline Components for Production ML
+# Assignment: Data Pipeline Components for Production ML
 
 In this assignment, we will carry out the first 3 steps of a production machine learning project - Data ingestion, Data Validation, and Data Transformation.
 
