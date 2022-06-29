@@ -1,5 +1,6 @@
 # Week 1 Assignment:
 ![overview](./overview.png)
+
 In this assignment, we will train and deploy a model using the Cloud AutoML API. More concretely, we will:
 1. Upload a labeled dataset to Cloud Storage.
 2. Connect the dataset to AutoML Vision with a CSV label file.
