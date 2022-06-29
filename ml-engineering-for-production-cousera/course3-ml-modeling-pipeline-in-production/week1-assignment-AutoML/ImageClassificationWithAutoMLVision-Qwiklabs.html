@@ -1,0 +1,818 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"587285446","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":309,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"587285446"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>Classify Images of Clouds in the Cloud with AutoML Vision | Qwiklabs</title>
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Khoa","lastname":"Nguyen","fullname":"Khoa Nguyen","company":"Coursera","email":"dknguyen.learn@gmail.com","origin":"googlecoursera-run, lti-deeplearning-ai","subscriptions":0,"id":"bb606b6101a5043c8df897d4dd4b8c7b","qlCreatedAt":"2022-06-29 07:37:38 UTC","optIn":null,"current_organization_role":null};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="googlecoursera-run";gon.content={"type":"Lab","id":1094,"name":"Classify Images of Clouds in the Cloud with AutoML Vision"};
+//]]>
+</script>
+<script>
+  dataLayer = [
+    {user: gon.current_user},
+    {content: gon.content}
+  ];
+</script>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-5XSKHDX");
+</script>
+<script src="https://cdn.qwiklabs.com/assets/hallofmirrors/polyfills/webcomponents-loader-8583b47b01e40e6ea7bf1ad443a20b7e79bbdd5eafac009806a228c91a97282c.js"></script>
+<script src="https://cdn.qwiklabs.com/assets/vendor-a84bd63ebad8cbea6bda06aeebb2d8207455f1b1d832ebfc452726e08245a4f1.js"></script>
+<script src="https://cdn.qwiklabs.com/assets/application-4aefea92fce0040a834da6ef54035f1dd5c9edf3e385f943b1b6acec231b1fcc.js"></script>
+<script src="https://cdn.qwiklabs.com/assets/hallofmirrors/hallofmirrors-9f37bd601dbc35bc16ee64d0d37847afa732cf10996558c38cf54a9f92625cf1.js"></script>
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id='ze-snippet' src='https://static.zdassets.com/ekr/snippet.js?key=511e4158-0aec-4e3c-b2e6-4daa1769f51e'></script>
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="dM81DIQ5u17vV3WjW3KOc35ytoz39TwX6sck3HRFd4L6SV1FdglCj1cs+L0aLTjWs0kdx3Eu1Oq9vRK/miQptA==" />
+<meta content='width=device-width, initial-scale=1.0, user-scalable=yes' name='viewport'>
+<meta content='1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0' name='google-site-verification'>
+<meta content='#3681E4' property='msapplication-TileColor'>
+<meta content='/favicon-144.png' property='msapplication-TileImage'>
+<meta content='[{&quot;id&quot;:&quot;recaptcha_experiment&quot;,&quot;optimize_id&quot;:&quot;dpViOcLkT3qS4TvL2mRojA&quot;,&quot;title&quot;:&quot;No Recaptcha shown for trusted users&quot;,&quot;variant_index&quot;:1,&quot;variant&quot;:&quot;no_recaptcha&quot;}]' name='active-experiments'>
+<meta content='{&quot;userId&quot;:8102214}' name='help-api-product-data'>
+<meta content='AutoML Vision helps developers with limited ML expertise train high quality image recognition models. In this hands-on lab, you will learn how to train a custom model to recognize different types of clouds (cumulus, cumulonimbus, etc.).' name='description'>
+<meta content='Qwiklabs' name='author'>
+<meta content='Classify Images of Clouds in the Cloud with AutoML Vision | Qwiklabs' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='/favicon-144.png' property='og:image'>
+<meta content='Qwiklabs' property='og:site_name'>
+<meta content='AutoML Vision helps developers with limited ML expertise train high quality image recognition models. In this hands-on lab, you will learn how to train a custom model to recognize different types of clouds (cumulus, cumulonimbus, etc.).' property='og:description'>
+<meta content='/qwiklabs_logo_900x887.png' property='og:logo' size='900x887'>
+<meta content='/qwiklabs_logo_994x187.png' property='og:logo' size='994x187'>
+
+
+<meta property="og:url" content="https://googlecoursera.qwiklabs.com/focuses/22426532?parent=lti_session" /><link href="https://googlecoursera.qwiklabs.com/focuses/22426532?parent=lti_session" rel="canonical" />
+<link color='#3681E4' href='/favicon-svg.svg' rel='mask-icon'>
+<link href='/favicon-180.png' rel='apple-touch-icon-precomposed'>
+<link href='/favicon-32.png' rel='shortcut icon' type='image/x-icon'>
+
+
+
+<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Oswald:400|Roboto+Mono:400,700|Roboto:300,400,500,700|Google+Sans:300,400,500,700|Google+Sans+Display:400|Material+Icons|Google+Material+Icons" />
+
+
+<link rel="stylesheet" media="all" href="https://cdn.qwiklabs.com/assets/application-56818f4340459c5a088e2aa59f60387314dbb4bcd72ea9a7501ad37b27b3e3d9.css" />
+
+<style>
+  :root {
+    --primary-text-on-surface-color: #1a73e8;
+    --primary-text-on-surface-color-dark: #1568d6;
+    --primary-text-on-surface-color-darker: #135ec1;
+    --primary-text-on-surface-color-darkest: #1154ac;
+    --primary-surface-color: #1a73e8;
+    --primary-surface-color-rgb: 26,115,232;
+    --primary-surface-color-light: #d1e3fa;
+    --primary-surface-color-lightest: #e8f1fd;
+    --text-on-primary-color: #ffffff;
+    --accent-text-on-surface-color: #f29900;
+    --accent-surface-color: #f9ab00;
+    --accent-surface-color-rgb: 249,171,0;
+    --accent-surface-color-light: #ffefcc;
+    --text-on-accent-color: #202124;
+  }
+</style>
+
+
+
+</head>
+<body class='lab-show l-full no-nav application-new focuses focuses-show lab-show l-full no-nav '>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-5XSKHDX' style='display:none;visibility:hidden;' width='0'></iframe>
+</noscript>
+<div class='header-container'>
+<div class='header'>
+<ql-toolbar jumpEnabled>
+<div class='header__title' slot='title'>
+<ql-icon-button label="Back" href="https://www.coursera.org/" id="734f72d7525e9ae1" target="_self" tip="Back">arrow_back</ql-icon-button>
+<h1 class='ql-headline-6'>Classify Images of Clouds in the Cloud with AutoML Vision</h1>
+</div>
+<div class='header__actions' slot='action'>
+<ql-icon-button id='control-panel-target' style='display: none;'>
+dashboard
+</ql-icon-button>
+<ql-menu for='control-panel-target' id='control-panel-menu'></ql-menu>
+<ql-icon-button class='mobile-hide' icon='help_outline' id='help-menu-button' label='Open help menu' tip='Help'></ql-icon-button>
+<ql-menu for='help-menu-button' id='help-menu'>
+<ql-menu-item data-analytics-action='opened_help' data-analytics-label='lab' label='Help Center' onclick='hallofmirrors.helpService.startHelp({&quot;productData&quot;:{&quot;userId&quot;:8102214},&quot;context&quot;:&quot;lab&quot;})'></ql-menu-item>
+<ql-menu-item href='https://support.google.com/qwiklabs/contact/contact_us' label='Email support' target='_blank'></ql-menu-item>
+<ql-menu-item label='Chat support' onClick='ql.chat.open()'></ql-menu-item>
+</ql-menu>
+
+<ql-icon-button class='mobile-hide' icon='language' id='language' label='Select your language preference' tip='Language'></ql-icon-button>
+<ql-menu for='language'>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='ar' href='/focuses/22426532?locale=ar&amp;parent=lti_session' label='العربية‬‎' lang='ar'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='de' href='/focuses/22426532?locale=de&amp;parent=lti_session' label='Deutsch' lang='de'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='en' href='/focuses/22426532?locale=en&amp;parent=lti_session' label='English' lang='en'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='es' href='/focuses/22426532?locale=es&amp;parent=lti_session' label='español (Latinoamérica)' lang='es'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='fr' href='/focuses/22426532?locale=fr&amp;parent=lti_session' label='français' lang='fr'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='fr_CA' href='/focuses/22426532?locale=fr_CA&amp;parent=lti_session' label='français (Canada)' lang='fr-CA'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='he' href='/focuses/22426532?locale=he&amp;parent=lti_session' label='עברית' lang='he'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='id' href='/focuses/22426532?locale=id&amp;parent=lti_session' label='bahasa Indonesia' lang='id'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='it' href='/focuses/22426532?locale=it&amp;parent=lti_session' label='Italiano' lang='it'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='ja' href='/focuses/22426532?locale=ja&amp;parent=lti_session' label='日本語' lang='ja'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='ko' href='/focuses/22426532?locale=ko&amp;parent=lti_session' label='한국어' lang='ko'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='pl' href='/focuses/22426532?locale=pl&amp;parent=lti_session' label='Polski' lang='pl'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='pt_BR' href='/focuses/22426532?locale=pt_BR&amp;parent=lti_session' label='português (Brasil)' lang='pt-BR'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='pt_PT' href='/focuses/22426532?locale=pt_PT&amp;parent=lti_session' label='português (Portugal)' lang='pt-PT'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='ru' href='/focuses/22426532?locale=ru&amp;parent=lti_session' label='русский' lang='ru'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='tr' href='/focuses/22426532?locale=tr&amp;parent=lti_session' label='Türkçe' lang='tr'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='uk' href='/focuses/22426532?locale=uk&amp;parent=lti_session' label='український' lang='uk'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='zh' href='/focuses/22426532?locale=zh&amp;parent=lti_session' label='简体中文' lang='zh'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='zh_TW' href='/focuses/22426532?locale=zh_TW&amp;parent=lti_session' label='繁體中文' lang='zh-TW'></ql-menu-item>
+</ql-menu>
+
+<ql-icon-button id='my_account' label='My account' tip='My account'>
+<ql-avatar></ql-avatar>
+</ql-icon-button>
+<ql-menu for='my_account' id='my_account_menu' style='max-height: 640px'>
+<div class='my-account-menu'>
+<ql-avatar class='l-mtl l-mbl' size='120'></ql-avatar>
+<div class='my-account-menu__user-info l-mbl'>
+<h4 class='ql-subhead-1'>Khoa Nguyen</h4>
+<p class='ql-body-2 text--light'>dknguyen.learn@gmail.com</p>
+<p class='ql-body-2 text--light'>
+</p>
+<a class="text--green ql-subhead-2" href="/my_account/payments"><ql-chip positive>
+0 Credits
+</ql-chip>
+</a></div>
+<div class='buttons l-mbl'>
+<a class="button button--hairline" id="settings" href="/my_account/profile">Settings</a>
+</div>
+<hr>
+<ql-button data-analytics-action='clicked_sign_out' href='/users/sign_out' method='delete'>
+Sign Out
+</ql-button>
+<div class='privacy l-mtl'>
+<a target="_blank" class="ql-caption text--light" href="/privacy_policy">Privacy</a>
+<span class='ql-caption text--light l-mls l-mrs'>&middot;</span>
+<a class="ql-caption text--light" href="/terms_of_service">Terms</a>
+</div>
+</div>
+</ql-menu>
+
+</div>
+</ql-toolbar>
+
+</div>
+</div>
+
+<nav class='nav-panel js-nav-panel'>
+<div class='nav-panel__logo'>
+<div class="custom-logo">Qwiklabs</div>
+</div>
+<nav class='ql-sidenav'>
+<ql-sidenav-item href='/' icon='home' label='Home'></ql-sidenav-item>
+
+<ql-sidenav-item href='/catalog' icon='school' label='Catalog'></ql-sidenav-item>
+
+<ql-sidenav-item href='/profile' icon='event_note' label='Profile'></ql-sidenav-item>
+
+</nav>
+
+</nav>
+<div class='nav-panel__overlay js-nav-toggle'></div>
+
+<main class='js-main' id='jump-content'>
+<div class='l-main-wrapper' id='main-wrapper'>
+
+
+
+
+<div class='lab-assessment__tab js-open-lab-assessment-panel'>
+<button class='js-lab-assessment-total-score'>
+—/100
+</button>
+</div>
+<div aria-labelledby='lab-assessment-checkpoint' class='lab-assessment__panel js-lab-assessment-panel' role='dialog'>
+<div class='lab-assessment__panel__header'>
+<h4 id='lab-assessment-checkpoint'>Checkpoints</h4>
+<ql-icon-button class='js-close-lab-assessment-panel' icon='arrow_forward' label='Close dialog'></ql-icon-button>
+</div>
+<div class='lab-assessment__step'>
+<p class='lab-assessment__step__title' id='lab-assessment-step-title'>
+Enable the AutoML API
+</p>
+<div class='lab-assessment__step__action'>
+<ql-button class='js-show-run-step-button' description='Enable the AutoML API' step_no='1'>
+Check my progress
+</ql-button>
+<p class='lab-assessment__step__score'>
+<span class='js-assessment-step-score-1'>
+</span>
+/ 25
+</p>
+</div>
+</div>
+
+<div class='lab-assessment__step'>
+<p class='lab-assessment__step__title' id='lab-assessment-step-title'>
+Create a Cloud Storage Bucket
+</p>
+<div class='lab-assessment__step__action'>
+<ql-button class='js-show-run-step-button' description='Create a Cloud Storage Bucket' step_no='2'>
+Check my progress
+</ql-button>
+<p class='lab-assessment__step__score'>
+<span class='js-assessment-step-score-2'>
+</span>
+/ 25
+</p>
+</div>
+</div>
+
+<div class='lab-assessment__step'>
+<p class='lab-assessment__step__title' id='lab-assessment-step-title'>
+Create a dataset
+</p>
+<div class='lab-assessment__step__action'>
+<ql-button class='js-show-run-step-button' description='Create a dataset' step_no='3'>
+Check my progress
+</ql-button>
+<p class='lab-assessment__step__score'>
+<span class='js-assessment-step-score-3'>
+</span>
+/ 25
+</p>
+</div>
+</div>
+
+<div class='lab-assessment__step'>
+<p class='lab-assessment__step__title' id='lab-assessment-step-title'>
+Run the predictions(Check the accuracy for the model)
+</p>
+<div class='lab-assessment__step__action'>
+<ql-button class='js-show-run-step-button' description='Run the predictions(Check the accuracy for the model)' step_no='4'>
+Check my progress
+</ql-button>
+<p class='lab-assessment__step__score'>
+<span class='js-assessment-step-score-4'>
+</span>
+/ 25
+</p>
+</div>
+</div>
+
+</div>
+<ql-drawer-container class='js-lab-state' data-analytics-payload='{&quot;label&quot;:&quot;Classify Images of Clouds in the Cloud with AutoML Vision&quot;,&quot;lab_name&quot;:&quot;Classify Images of Clouds in the Cloud with AutoML Vision&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;googlecoursera-run&quot;}' data-focus-id='22426532' data-lab-billing-limit='0.0' data-lab-duration='7200' data-parent='lti_session' data-recaptcha-enabled id='lab-container'>
+<ql-drawer id='terminal-drawer' slot='drawer' style='width: calc(100% - 480px)'>
+<iframe allow='clipboard-read' class='terminal' id='embedded-resource'></iframe>
+</ql-drawer>
+<ql-drawer-content class='js-lab-wrapper' id='lab-content' slot='drawer-content'>
+<ql-drawer-container id='lab-content-container'>
+<ql-drawer id='control-panel-drawer' open slot='drawer' width='320'>
+<ql-lab-control-panel class='ql-lab-control-panel__max-height control-panel js-lab-control-panel' connectionFiles='[]' labControlButton='{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}' labDetails='[]' labTimer='{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:7200}' studentResources='[]'>
+<script src="https://www.recaptcha.net/recaptcha/api.js?render=6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr"   ></script>
+        <script>
+          // Define function so that we can call it again later if we need to reset it
+          // This executes reCAPTCHA and then calls our callback.
+          function executeRecaptchaForStartLab() {
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr', {action: 'start_lab'}).then(function(token) {
+                setInputWithRecaptchaResponseTokenForStartLab('g-recaptcha-response-data-start-lab', token)
+              });
+            });
+          };
+          // Invoke immediately
+          executeRecaptchaForStartLab()
+
+          // Async variant so you can await this function from another async function (no need for
+          // an explicit callback function then!)
+          // Returns a Promise that resolves with the response token.
+          async function executeRecaptchaForStartLabAsync() {
+            return new Promise((resolve, reject) => {
+             grecaptcha.ready(async function() {
+                resolve(await grecaptcha.execute('6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr', {action: 'start_lab'}))
+              });
+            })
+          };
+
+                    var setInputWithRecaptchaResponseTokenForStartLab = function(id, token) {
+            var element = document.getElementById(id);
+            element.value = token;
+          }
+
+        </script>
+<input type="hidden" name="g-recaptcha-response-data[start_lab]" id="g-recaptcha-response-data-start-lab" data-sitekey="6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr" class="g-recaptcha g-recaptcha-response "/>
+
+<div aria-live='polite' class='hidden' id='recaptcha-v2-start-lab' slot='recaptcha'>
+<script src="https://www.recaptcha.net/recaptcha/api.js" async defer ></script>
+<div data-sitekey="6LeOI8IUAAAAAPkHlMAE9NReCD_1WD81iYlBlCnV" data-callback="recaptchaComplete" data-expired-callback="expireV2Token" class="g-recaptcha "></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative;">
+                <div style="width: 302px; height: 422px; position: absolute;">
+                  <iframe
+                    src="https://www.recaptcha.net/recaptcha/api/fallback?k=6LeOI8IUAAAAAPkHlMAE9NReCD_1WD81iYlBlCnV"
+                    name="ReCAPTCHA"
+                    style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+                  </iframe>
+                </div>
+              </div>
+              <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+              </div>
+            </div>
+          </noscript>
+
+</div>
+</ql-lab-control-panel>
+</ql-drawer>
+<ql-drawer-content id='lab-instructions' slot='drawer-content'>
+<ql-snackbar id='alert-snackbar'></ql-snackbar>
+<div class='alert alert--fake js-alert'>
+<p class='alert__message js-alert-message' role='alert'></p>
+<ql-icon-button class='alert__close js-alert-close' icon='clear'></ql-icon-button>
+<iframe class='l-ie-iframe-fix' tabindex='-1'></iframe>
+</div>
+<div class='lab-content__renderable-instructions js-lab-content'>
+<div class='lab-preamble'>
+<h1 class='lab-preamble__title'>
+Classify Images of Clouds in the Cloud with AutoML Vision
+</h1>
+<div class='lab-preamble__details subtitle-headline-1'>
+<span>2 hours </span>
+<span>Free</span>
+<div class='lab__rating'>
+<a aria-label="Lab Reviews" href="/focuses/22426532/reviews?parent=lti_session"><div class='rateit' data-rateit-readonly='true' data-rateit-value='4.3149'></div>
+
+</a></div>
+</div>
+</div>
+<div class='lab-outline-place-holder'></div>
+
+<div class='markdown-lab-instructions js-markdown-instructions' id='markdown-lab-instructions'>
+
+<h2 id="step1">GSP223</h2>
+<p><img alt="Google Cloud selp-paced labs logo" src="https://cdn.qwiklabs.com/GMOHykaqmlTHiqEeQXTySaMXYPHeIvaqa2qHEzw6Occ%3D"></p>
+<h2 id="step2">Overview</h2>
+<p>AutoML Vision helps developers with limited ML expertise train high quality image recognition models. Once you upload images to the AutoML UI, you can train a model that will be immediately available on Google Cloud for generating predictions via an easy to use REST API.</p>
+<p>In this lab, you will upload images to Cloud Storage and use them to train a custom model to recognize different types of clouds (cumulus, cumulonimbus, etc.).</p>
+<h4><strong>What you'll learn</strong></h4>
+<ul>
+<li>
+<p>Uploading a labeled dataset to Cloud Storage and connecting it to AutoML Vision with a CSV label file.</p>
+</li>
+<li>
+<p>Training a model with AutoML Vision and evaluating its accuracy.</p>
+</li>
+<li>
+<p>Generating predictions on your trained model.</p>
+</li>
+</ul>
+<h2 id="step3">Setup and requirements</h2>
+<h3><strong>Qwiklabs setup</strong></h3>
+<h3>Before you click the Start Lab button</h3>
+<p>Read these instructions. Labs are timed and you cannot pause them. The timer, which starts when you click <strong>Start Lab</strong>, shows how long Google Cloud resources will be made available to you.</p>
+<p>This hands-on lab lets you do the lab activities yourself in a real cloud environment, not in a simulation or demo environment. It does so by giving you new, temporary credentials that you use to sign in and access Google Cloud for the duration of the lab.</p>
+<p>To complete this lab, you need:</p>
+<ul>
+<li>Access to a standard internet browser (Chrome browser recommended).</li>
+</ul>
+<ql-warningbox>
+<strong>Note:</strong> Use an Incognito or private browser window to run this lab. This prevents any conflicts between your personal account and the Student account, which may cause extra charges incurred to your personal account.
+</ql-warningbox>
+<ul>
+<li>Time to complete the lab---remember, once you start, you cannot pause a lab.</li>
+</ul>
+<ql-warningbox>
+<strong>Note:</strong> If you already have your own personal Google Cloud account or project, do not use it for this lab to avoid extra charges to your account.
+</ql-warningbox>
+<h3>How to start your lab and sign in to the Google Cloud Console</h3>
+<ol>
+<li>
+<p>Click the <strong>Start Lab</strong> button. If you need to pay for the lab, a pop-up opens for you to select your payment method.
+On the left is the <strong>Lab Details</strong> panel with the following:</p>
+<ul>
+<li>The <strong>Open Google Console</strong> button</li>
+<li>Time remaining</li>
+<li>The temporary credentials that you must use for this lab</li>
+<li>Other information, if needed, to step through this lab</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Open Google Console</strong>.
+The lab spins up resources, and then opens another tab that shows the <strong>Sign in</strong> page.</p>
+<p><strong><em>Tip:</em></strong> Arrange the tabs in separate windows, side-by-side.</p>
+<ql-infobox>
+<strong>Note: </strong>If you see the <strong>Choose an account</strong> dialog, click <strong>Use Another Account</strong>.        
+ </ql-infobox>
+</li>
+<li>
+<p>If necessary, copy the <strong>Username</strong> from the <strong>Lab Details</strong> panel and paste it into the <strong>Sign in</strong> dialog. Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Copy the <strong>Password</strong> from the <strong>Lab Details</strong> panel and paste it into the <strong>Welcome</strong> dialog. Click <strong>Next</strong>.</p>
+<ql-infobox>
+<strong>Important: </strong>You must use the credentials from the left panel. Do not use your Google Cloud Skills Boost credentials. 
+ </ql-infobox>
+<ql-warningbox>
+<strong>Note: </strong>Using your own Google Cloud account for this lab may incur extra charges.
+ </ql-warningbox>
+</li>
+<li>
+<p>Click through the subsequent pages:</p>
+<ul>
+<li>Accept the terms and conditions.</li>
+<li>Do not add recovery options or two-factor authentication (because this is a temporary account).</li>
+<li>Do not sign up for free trials.</li>
+</ul>
+</li>
+</ol>
+<p>After a few moments, the Cloud Console opens in this tab.</p>
+<ql-infobox>
+<strong>Note:</strong> You can view the menu with a list of Google Cloud Products and Services by clicking the <strong>Navigation menu</strong> at the top-left.
+<img alt="Navigation menu icon" src="https://cdn.qwiklabs.com/9vT7xPlxoNP%2FPsK0J8j0ZPFB4HnnpaIJVCDByaBrSHg%3D">
+</ql-infobox>
+<h2 id="step4">Set up AutoML Vision</h2>
+<p>AutoML Vision provides an interface for all the steps in training an image classification model and generating predictions on it. Start by enabling the Cloud AutoML API.</p>
+<p>From the <strong>Navigation menu</strong>, select <strong>APIs &amp; Services</strong> &gt; <strong>Library</strong>.</p>
+<p>In the search bar type in "Cloud AutoML". Click on the <strong>Cloud AutoML API</strong> result and then click <strong>Enable</strong>.</p>
+<p>This will take a minute to set up.</p>
+<p>Now open this <a href="https://console.cloud.google.com/vision/datasets" target="_blank">AutoML UI</a> link in a new browser.</p>
+<p>Click <strong>Check my progress</strong> to verify the objective.</p>
+<ql-activity-tracking step="1">
+    Enable the AutoML API
+</ql-activity-tracking>
+<h3>Activate Cloud Shell</h3>
+<p>Cloud Shell is a virtual machine that is loaded with development tools. It offers a persistent 5GB home directory and runs on the Google Cloud. Cloud Shell provides command-line access to your Google Cloud resources.</p>
+<ol>
+<li>In the Cloud Console, in the top right toolbar, click the <strong>Activate Cloud Shell</strong> button.</li>
+</ol>
+<p><img alt="Cloud Shell icon" src="https://cdn.qwiklabs.com/vdY5e%2Fan9ZGXw5a%2FZMb1agpXhRGozsOadHURcR8thAQ%3D"></p>
+<ol start="2">
+<li>Click <strong>Continue</strong>.</li>
+</ol>
+<p>It takes a few moments to provision and connect to the environment. When you are connected, you are already authenticated, and the project is set to your <strong>PROJECT_ID</strong>. The output contains a line that declares the <strong>PROJECT_ID</strong> for this session:</p>
+<ql-code-block output="">
+Your Cloud Platform project in this session is set to YOUR_PROJECT_ID
+</ql-code-block>
+<p><code>gcloud</code> is the command-line tool for Google Cloud. It comes pre-installed on Cloud Shell and supports tab-completion.</p>
+<ol start="3">
+<li>
+<p>(Optional) You can list the active account name with this command:</p>
+</li>
+</ol>
+<ql-code-block language="plaintext">
+gcloud auth list
+</ql-code-block>
+<p>(Output)</p>
+<ql-code-block language="plaintext" output="">
+ACTIVE: *
+ACCOUNT: student-01-xxxxxxxxxxxx@qwiklabs.net
+To set the active account, run:
+    $ gcloud config set account `ACCOUNT`
+</ql-code-block>
+<ol start="4">
+<li>
+<p>(Optional) You can list the project ID with this command:</p>
+</li>
+</ol>
+<ql-code-block language="plaintext">
+gcloud config list project
+</ql-code-block>
+<p>(Output)</p>
+<ql-code-block language="plaintext" output="">
+[core]
+project = &lt;project_ID&gt;
+</ql-code-block>
+<p>(Example output)</p>
+<ql-code-block language="plaintext" output="">
+[core]
+project = qwiklabs-gcp-44776a13dea667a6
+</ql-code-block>
+<ql-infobox>
+  For full documentation of <code>gcloud</code>, in Google Cloud, Cloud SDK documentation, see the <a href="https://cloud.google.com/sdk/gcloud" target="_blank">gcloud command-line tool overview</a>.
+</ql-infobox>
+<p>In Cloud Shell, use the following commands to create environment variables for your Project ID and Username, replacing <code>&lt;USERNAME&gt;</code> with the User Name you logged into the lab with:</p>
+<ql-code-block language="plaintext">
+export PROJECT_ID=$DEVSHELL_PROJECT_ID
+</ql-code-block>
+<ql-code-block language="plaintext">
+export QWIKLABS_USERNAME=&lt;USERNAME&gt;
+</ql-code-block>
+<p>Run the following command to give AutoML permissions:</p>
+<ql-code-block language="plaintext">
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member="user:$QWIKLABS_USERNAME" \
+    --role="roles/automl.admin"
+</ql-code-block>
+<p>Now create a storage bucket by running the following:</p>
+<ql-code-block language="plaintext">
+gsutil mb -p $PROJECT_ID \
+    -c standard    \
+    -l us-central1 \
+    gs://$PROJECT_ID-vcm/
+</ql-code-block>
+<p>In the Google Cloud console, open the <strong>Navigation menu</strong> and click on <strong>Cloud Storage</strong> to see it.</p>
+<p><img alt="cloud_storage.png" src="https://cdn.qwiklabs.com/LgQHkdORgca1GiMt13p7LB8lugxR4J3wkYkzRTnLpK8%3D"></p>
+<p>Click <strong>Check my progress</strong> to verify the objective.</p>
+<ql-activity-tracking step="2">
+    Create a Cloud Storage Bucket
+</ql-activity-tracking>
+<h2 id="step5">Upload training images to Cloud Storage</h2>
+<p>In order to train a model to classify images of clouds, you need to provide labeled training data so the model can develop an understanding of the image features associated with different types of clouds. In this example your model will learn to classify three different types of clouds: cirrus, cumulus, and cumulonimbus. To use AutoML Vision you need to put your training images in Cloud Storage.</p>
+<p>Before adding the cloud images, create an environment variable with the name of your bucket.</p>
+<p>Run the following command in Cloud Shell:</p>
+<ql-code-block language="plaintext">
+export BUCKET=$PROJECT_ID-vcm
+</ql-code-block>
+<p>The training images are publicly available in a Cloud Storage bucket.</p>
+<p>Use the <code>gsutil</code> command line utility for Cloud Storage to copy the training images into your bucket:</p>
+<ql-code-block language="plaintext">
+gsutil -m cp -r gs://spls/gsp223/images/* gs://${BUCKET}
+</ql-code-block>
+<p>When the images finish copying, click the <strong>Refresh</strong> button at the top of the Storage browser, then click on your bucket name. You should see 3 folders of photos for each of the 3 different cloud types to be classified:</p>
+<p><img alt="autoML_bucket_folders.png" src="https://cdn.qwiklabs.com/PfQsiMv9hT8hK4a7JNAXYiSFCs5l38u5idp97d7pz7U%3D"></p>
+<p>If you click on the individual image files in each folder you can see the photos you'll be using to train your model for each type of cloud.</p>
+<h2 id="step6">Create a dataset</h2>
+<p>Now that your training data is in Cloud Storage, you need a way for AutoML Vision to access it. You'll create a CSV file where each row contains a URL to a training image and the associated label for that image. This CSV file has been created for you; you just need to update it with your bucket name.</p>
+<p>Run the following command to copy the file to your Cloud Shell instance:</p>
+<ql-code-block language="plaintext">
+gsutil cp gs://spls/gsp223/data.csv .
+</ql-code-block>
+<p>Then update the CSV with the files in your project:</p>
+<ql-code-block language="plaintext">
+sed -i -e "s/placeholder/${BUCKET}/g" ./data.csv
+</ql-code-block>
+<p>Now upload this file to your Cloud Storage bucket:</p>
+<ql-code-block language="plaintext">
+gsutil cp ./data.csv gs://${BUCKET}
+</ql-code-block>
+<p>Once that command completes, click the <strong>Refresh</strong> button at the top of the Storage browser. Confirm that you see the <code>data.csv</code> file in your bucket.</p>
+<p>Navigate back to the <a href="https://console.cloud.google.com/vision/datasets" target="_blank">AutoML Vision</a> tab. Your page should now resemble the following:</p>
+<p><img alt="MLVision_nobeta.png" src="https://cdn.qwiklabs.com/41hLvbod7%2F%2BbrlsR4ffJfxcKqTygW0Ztk6EEycLnvZQ%3D"></p>
+<p>At the top of the console, click <strong>+ NEW DATASET</strong>.</p>
+<p>Type "clouds" for the Dataset name.</p>
+<p>Select "Single-Label Classification".</p>
+<p><img alt="mlvision-new-dataset.png" src="https://cdn.qwiklabs.com/%2B8pUNE2YZtCEg2qi7vAZqg1Q9C53hCgRzORwXovbtfM%3D"></p>
+<aside>
+In your own projects, you may want to use  <a href="https://cloud.google.com/vision/automl/docs/datasets" target="_blank">multi-class classification</a>.
+</aside>
+<p>Click <strong>CREATE DATASET</strong>.</p>
+<p>Choose <strong>Select a CSV file on Cloud Storage</strong> and add the file name to the URL for the file you just uploaded - <code>gs://your-bucket-name/data.csv</code></p>
+<p>An easy way to get this link is to go back to the Cloud Console, click on the <code>data.csv</code> file. Click on the <strong>copy</strong> icon in the URI field.</p>
+<p><img alt="mlvision-select-file.png" src="https://cdn.qwiklabs.com/RAwz9Rtet7q3gqv%2BotwuBUArXHVNWuUpyHM4t2qYgwc%3D"></p>
+<p>Click <strong>CONTINUE</strong>.</p>
+<p>It will take 2 - 5 minutes for your images to import. Once the import has completed, you'll be brought to a page with all the images in your dataset.</p>
+<p>Click <strong>Check my progress</strong> to verify the objective.</p>
+<ql-activity-tracking step="3">
+    Create a Dataset
+</ql-activity-tracking>
+<h2 id="step7">Inspect images</h2>
+<p>After the import completes, click on the <strong>Images</strong> tab to see the images you uploaded.</p>
+<p><img alt="autoML_images.png" src="https://cdn.qwiklabs.com/tzDqFo8VkT%2FXQ7i%2Fbx5E2pKB79qHTKAUX6LQ5hoYyZA%3D"></p>
+<p>Try filtering by different labels in the left menu (i.e. click cumulus) to review the training images:</p>
+<aside class="special"><p><strong>Note: </strong>If you were building a production model, you'd want <em>at least</em> 100 images per label to ensure high accuracy. This is just a demo so only 20 images were used so the model could train quickly.</p>
+</aside>
+<p>If any images are labeled incorrectly you can click on the image to switch the label:</p>
+<p><img alt="mlvision-image-detail.png" src="https://cdn.qwiklabs.com/aY7fkDJBpEKdzDOi9ugeZajUJWJdivpgpbMSkQqOqak%3D"></p>
+<p>To see a summary of how many images you have for each label, click on <strong>LABEL STATS</strong> at the top of the page. You should see the following show up on the right side of your browser.</p>
+<p><img alt="label_stats.png" src="https://cdn.qwiklabs.com/DP8aW3z3fgMb%2B4W6IH%2BsT0fSnF8IL5YuyYd4NJLcfxM%3D"></p>
+<aside class="special"><p><strong>Note: </strong>If you are working with a dataset that isn't already labeled, AutoML Vision provides an in-house <a href="https://cloud.google.com/vision/automl/docs/human-labeling" target="_blank"> human labeling service </a>.</p>
+</aside>
+<h2 id="step8">Train your model</h2>
+<p>You're ready to start training your model! AutoML Vision handles this for you automatically, without requiring you to write any of the model code.</p>
+<p>To train your clouds model, go to the <strong>Train</strong> tab and click <strong>Start Training</strong>.</p>
+<p>Enter a name for your model, or use the default auto-generated name.</p>
+<p>Leave <strong>Cloud-hosted</strong> selected, then click <strong>Continue</strong>.</p>
+<p>Set the node hours to <strong>8</strong>.</p>
+<p><img alt="VisionAutoML_8nodehrs.png" src="https://cdn.qwiklabs.com/qdPvx9pL%2BkVqMxjhXAJu001fNTKJQzXDyGOikPjzjU4%3D"></p>
+<p>Click <strong>Start Training</strong>.</p>
+<p>Since this is a small dataset, it will only take around <strong>25-30 minutes</strong> to complete.</p>
+<p>While you're waiting, you can watch this YouTube video on <a href="https://youtu.be/_2eG8xpRYZ4" target="_blank">preparing an image data in AutoML</a> - the images should look familiar!</p>
+<h2 id="step9">Evaluate your model</h2>
+<p>In the <strong>Evaluate</strong> tab, you'll see information about Precision and Recall of the model.</p>
+<p><img alt="AutoML_precision_graph.png" src="https://cdn.qwiklabs.com/simnOR6FQfPcrNjMfcIrxzNQYi%2F9Cx48HXCmucuGFuk%3D"></p>
+<p>You can also play around with <strong>Confidence threshold</strong>.</p>
+<p>Finally, scroll down to take a look at the <strong>Confusion matrix</strong>.</p>
+<p><img alt="AutoML_confusion.png" src="https://cdn.qwiklabs.com/O2PIBjlXs5pP5XN%2BtlDkwI9C37WY8s6xvDJT7iM6%2BiI%3D"></p>
+<p>All of this provides some common machine learning metrics to evaluate your model accuracy and see where you can improve your training data. Since the focus for this lab was not on accuracy, move on to the next section about predictions section. Feel free to browse the accuracy metrics on your own.</p>
+<h2 id="step10">Deploy your model</h2>
+<p>Now it's time for the most important part: generating predictions on your trained model using data it hasn't seen before.</p>
+<p>Navigate to the <strong>Test &amp; Use</strong> tab in the AutoML UI:</p>
+<p><img alt="mlvision-test-n-use.png" src="https://cdn.qwiklabs.com/rEGvjB%2BB88LFgRdY1SPaQUS%2BHh1Lw0ecEthZKOi%2Bhpw%3D"></p>
+<p>Click <strong>Deploy model</strong> and then click <strong>Deploy</strong>.</p>
+<p>This will take around <strong>20 minutes</strong> to deploy.</p>
+<h2 id="step11">Generate predictions</h2>
+<p>There are a few ways to generate predictions. In this lab you'll use the UI to upload images. You'll see how your model does classifying these two images (the first is a cirrus cloud, the second is a cumulonimbus).</p>
+<p>Download these images to your local machine by right-clicking on each of them:</p>
+<p><img alt="a4e6d50183e83703.png" src="https://cdn.qwiklabs.com/N2psyplM3kFK9NEjjpak3CPIhh8IurY7Tn9vqzi4r8M%3D"></p>
+<p><img alt="1d4aaa17ec62e9ba.png" src="https://cdn.qwiklabs.com/GZlBRmAKGzsDoT8yNRCh6VmxflxLEQEkiKPohYwja94%3D"></p>
+<p>Return to the AutoML Vision UI, click <strong>Upload Images</strong> and upload the clouds to the online prediction UI. When the prediction request completes you should see something like the following:</p>
+<p><img alt="predict.png" src="https://cdn.qwiklabs.com/05ILogmUOj0mnjdajKv6KIZs%2B9oqOpf9366jkb6iKOE%3D"></p>
+<p>Click <strong>Check my progress</strong> to verify the objective.</p>
+<ql-activity-tracking step="4">
+    Run the predictions
+</ql-activity-tracking>
+<p>Pretty cool - the model classified each type of cloud correctly!</p>
+<h2 id="step12">Congratulations!</h2>
+<p>You've learned how to train your own custom machine learning model and generate predictions on it through the web UI. Now you've got what it takes to train a model on your own image dataset.</p>
+<h4><strong>What was covered</strong></h4>
+<ul>
+<li>
+<p>Uploading training images to Cloud Storage and creating a CSV for AutoML Vision to find these images.</p>
+</li>
+<li>
+<p>Reviewing labels and training a model in the AutoML Vision UI.</p>
+</li>
+<li>
+<p>Generating predictions on new cloud images.</p>
+</li>
+</ul>
+<h3>Finish your Quest</h3>
+<p><img alt="ml_quest_icon.png" src="https://cdn.qwiklabs.com/IApG9d%2FXIEgLgs087RvzuRMv2SCAHo6owBXVZUfyhtQ%3D">
+<img alt="ML-Image-Processing-badge.png" src="https://cdn.qwiklabs.com/RGK1oeQbB4Lh3nZadxyeMRveRZuO8WQMNCDyzomMKMM%3D"></p>
+<p>This self-paced lab is part of the Qwiklabs  <a href="https://google.qwiklabs.com/quests/32" target="_blank">Machine Learning APIs</a> and <a href="https://google.qwiklabs.com/quests/85" target="_blank">Intro to ML: Image Processing</a> Quests. A Quest is a series of related labs that form a learning path. Completing a Quest earns you a badge to recognize your achievement. You can make your badge (or badges) public and link to them in your online resume or social media account. Enroll in these Quests and get immediate completion credit if you've taken this lab.  <a href="https://google.qwiklabs.com/catalog" target="_blank">See other available Qwiklabs Quests</a>.</p>
+<h3>Take your next lab</h3>
+<p>Continue your Quest with  <a href="https://google.qwiklabs.com/catalog_lab/1112" target="_blank">Detect Labels, Faces, and Landmarks in Images with the Cloud Vision API</a>, or check out these suggestions:</p>
+<ul>
+<li>
+<p><a href="https://google.qwiklabs.com/catalog_lab/1041" target="_blank">Awwvision: Cloud Vision API from a Kubernetes Cluster</a></p>
+</li>
+<li>
+<p><a href="https://google.qwiklabs.com/catalog_lab/1113" target="_blank">Entity and Sentiment Analysis with the Natural Language API</a></p>
+</li>
+</ul>
+<h3>Next steps / learn more</h3>
+<ul>
+<li>Watch the  <a href="https://www.youtube.com/watch?v=GbLQE2C181U" target="_blank">intro video</a>
+</li>
+<li>Learn more about how AutoML Vision works by listening to the  <a href="https://www.gcppodcast.com/post/episode-109-cloud-automl-vision-with-amy-unruh-and-sara-robinson/" target="_blank">Google Cloud Podcast episode</a>
+</li>
+<li>Read the announcement  <a href="https://www.blog.google/topics/google-cloud/cloud-automl-making-ai-accessible-every-business/" target="_blank">blog post</a>
+</li>
+<li>Learn how to  <a href="https://cloud.google.com/vision/automl/docs/beginners-guide" target="_blank">perform each step with the API</a>
+</li>
+</ul>
+<h3>Google Cloud Training &amp; Certification</h3>
+<p>...helps you make the most of Google Cloud technologies. <a href="https://cloud.google.com/training/courses" target="_blank">Our classes</a> include technical skills and best practices to help you get up to speed quickly and continue your learning journey. We offer fundamental to advanced level training, with on-demand, live, and virtual options to suit your busy schedule. <a href="https://cloud.google.com/certification/" target="_blank">Certifications</a> help you validate and prove your skill and expertise in Google Cloud technologies.</p>
+<h5>Manual Last Updated April 20, 2022</h5>
+<h5>Lab Last Tested April 20, 2022</h5>
+<p>Copyright 2022 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+</div>
+</div>
+
+
+<div class='lab-content__end-lab-button js-end-lab-button-container hidden'>
+<ql-lab-control-button class='js-end-lab-button' running></ql-lab-control-button>
+</div>
+<!-- / TODO: Move recommendations into the end lab modal -->
+</ql-drawer-content>
+<ql-drawer end id='outline-drawer' open slot='drawer' width='320'>
+<div aria-label='Lab Table of Contents' role='navigation'>
+<ul class='lab-content__outline js-lab-content-outline'>
+<li><a href='#step1'>GSP223</a></li><li><a href='#step2'>Overview</a></li><li><a href='#step3'>Setup and requirements</a></li><li><a href='#step4'>Set up AutoML Vision</a></li><li><a href='#step5'>Upload training images to Cloud Storage</a></li><li><a href='#step6'>Create a dataset</a></li><li><a href='#step7'>Inspect images</a></li><li><a href='#step8'>Train your model</a></li><li><a href='#step9'>Evaluate your model</a></li><li><a href='#step10'>Deploy your model</a></li><li><a href='#step11'>Generate predictions</a></li><li><a href='#step12'>Congratulations!</a></li>
+</ul>
+</div>
+</ql-drawer>
+</ql-drawer-container>
+</ql-drawer-content>
+</ql-drawer-container>
+
+
+
+</div>
+</main>
+
+<span class='hidden' id='flash-sibling-before'></span>
+<ql-snackbar></ql-snackbar>
+
+
+<div class='modal fade' id='lab-details-modal'>
+<div class='modal-container'>
+<div class='modal-content mdl-shadow--24dp'>
+<div class='modal-body'>
+<p class='l-mbm'>
+AutoML Vision helps developers with limited ML expertise train high quality image recognition models. In this hands-on lab, you will learn how to train a custom model to recognize different types of clouds (cumulus, cumulonimbus, etc.).
+</p>
+<p>
+This lab is included in these quests:
+<a href="/quests/32">Machine Learning APIs</a>, <a href="/quests/86">Google Developer Essentials</a>, <a href="/quests/85">Intro to ML: Image Processing</a>.
+If you complete this lab you&#39;ll receive credit for it when you enroll in one of these quests.
+</p>
+<p class='small-label l-mbs'>
+<strong>
+Duration:
+</strong>
+1m setup
+&middot;
+120m access
+&middot;
+120m completion
+</p>
+<p class='small-label l-mbs'>
+<strong>AWS Region:</strong>
+[] <strong></strong>
+</p>
+<p class='small-label l-mbs'>
+<span><strong>Levels: </strong>intermediate</span>
+</p>
+<p class='small-label'>
+<strong>
+Permalink:
+</strong>
+<a href="https://googlecoursera.qwiklabs.com/catalog_lab/1094">https://googlecoursera.qwiklabs.com/catalog_lab/1094</a>
+</p>
+</div>
+<div class='modal-actions'>
+<a class='button button--text' data-dismiss='modal'>
+Got It
+</a>
+</div>
+
+
+</div>
+</div>
+<iframe class='l-ie-iframe-fix' tabindex='-1' title='modal'></iframe>
+</div>
+<ql-dialog headline='How satisfied are you with this lab?&lt;span aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;' id='lab-review-dialog'>
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><div aria-labelledby='lab-review-dialog' aria-required='true' aria-valuemax='5' aria-valuemin='0' aria-valuenow='0' class='rateit js-rateit' data-rateit-max='5' data-rateit-min='0' data-rateit-resetable='false' data-rateit-step='1' data-rateit-value='0' id='lab-review-rateit' role='slider' tabindex='0'></div>
+<div class='l-mtm'>
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" autocomplete="off" type="hidden" value="8102214" name="lab_review[user_id]" id="lab_review_user_id" /></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" autocomplete="off" type="hidden" name="lab_review[classroom_id]" id="lab_review_classroom_id" /></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" autocomplete="off" type="hidden" value="1094" name="lab_review[lab_id]" id="lab_review_lab_id" /></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" autocomplete="off" type="hidden" name="lab_review[focus_id]" id="lab_review_focus_id" /></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" autocomplete="off" type="hidden" name="lab_review[rating]" id="lab_review_rating" /></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Additional Comments</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment">
+</textarea></div></div>
+</div>
+</form><ql-button disabled id='submit' label='Submit' slot='action' text></ql-button>
+</ql-dialog>
+
+<ql-dialog headline='All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?' icon='error_outline' id='js-lab-are-you-sure-dialog'>
+<ql-button id='js-are-you-sure-button' label='Submit' slot='action' text></ql-button>
+</ql-dialog>
+
+
+<script>
+  $(function() {
+    ql.surveys.pageView();
+  });
+</script>
+<script>
+  $(function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    ql.chat.init();
+  ql.jumpContent.init();
+  ql.labControlPanel.addRecaptchaErrorHandler();
+  initLabContent();
+  ql.labOutline.links.init();
+  initLabReviewModal();
+  initLabReviewTranslations( {"star_amount_1":"1 of 5 stars","star_amount_2":"2 of 5 stars","star_amount_3":"3 of 5 stars","star_amount_4":"4 of 5 stars","star_amount_5":"5 of 5 stars"} )
+  ql.labAssessment.init();
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+
+</body>
+</html>
+
