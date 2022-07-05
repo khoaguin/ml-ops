@@ -1,5 +1,5 @@
 # Docker & Kubernetes: The Practical Guide - Udemy
-![logo](./logo.png "course logo")
+![logo](./logo1.png "course logo")
 
 Repo for the course [Docker & Kubernetes: The Practical Guide [2022 Edition] - Udemy](https://www.udemy.com/course/docker-kubernetes-the-practical-guide/)
 
