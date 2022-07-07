@@ -1,0 +1,907 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"587285446","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":331,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"587285446"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>Distributed Multi-worker TensorFlow Training on Kubernetes | Qwiklabs</title>
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Khoa","lastname":"Nguyen","fullname":"Khoa Nguyen","company":"Coursera","email":"dknguyen.learn@gmail.com","origin":"googlecoursera-run, lti-deeplearning-ai","subscriptions":0,"id":"bb606b6101a5043c8df897d4dd4b8c7b","qlCreatedAt":"2022-06-29 07:37:38 UTC","optIn":null,"current_organization_role":null};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="googlecoursera-run";gon.content={"type":"Lab","id":3384,"name":"Distributed Multi-worker TensorFlow Training on Kubernetes"};
+//]]>
+</script>
+<script>
+  dataLayer = [
+    {user: gon.current_user},
+    {content: gon.content}
+  ];
+</script>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-5XSKHDX");
+</script>
+<script src="https://cdn.qwiklabs.com/assets/hallofmirrors/polyfills/webcomponents-loader-8583b47b01e40e6ea7bf1ad443a20b7e79bbdd5eafac009806a228c91a97282c.js"></script>
+<script src="https://cdn.qwiklabs.com/assets/vendor-a84bd63ebad8cbea6bda06aeebb2d8207455f1b1d832ebfc452726e08245a4f1.js"></script>
+<script src="https://cdn.qwiklabs.com/assets/application-eef917c38c0b59231d0ad6b79316c7a27f8d8f7b6a862c1fb210d3049a10fe1d.js"></script>
+<script src="https://cdn.qwiklabs.com/assets/hallofmirrors/hallofmirrors-9f37bd601dbc35bc16ee64d0d37847afa732cf10996558c38cf54a9f92625cf1.js"></script>
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id='ze-snippet' src='https://static.zdassets.com/ekr/snippet.js?key=511e4158-0aec-4e3c-b2e6-4daa1769f51e'></script>
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Rn0LtRFcmYSJbS0vBjcx7CCQr4xa4WJxPkqWIW8OPl/ruqWCN/djEH7RZy9hiunbGxzZ5dsAY0w34n8rvMzTeA==" />
+<meta content='width=device-width, initial-scale=1.0, user-scalable=yes' name='viewport'>
+<meta content='1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0' name='google-site-verification'>
+<meta content='#3681E4' property='msapplication-TileColor'>
+<meta content='/favicon-144.png' property='msapplication-TileImage'>
+<meta content='[{&quot;id&quot;:&quot;recaptcha_experiment&quot;,&quot;optimize_id&quot;:&quot;dpViOcLkT3qS4TvL2mRojA&quot;,&quot;title&quot;:&quot;No Recaptcha shown for trusted users&quot;,&quot;variant_index&quot;:1,&quot;variant&quot;:&quot;no_recaptcha&quot;}]' name='active-experiments'>
+<meta content='{&quot;userId&quot;:8102214}' name='help-api-product-data'>
+<meta content='In this hands-on lab you will explore using Google Cloud Kubernetes Engine and Kubeflow TFJob to scale out TensorFlow distributed training.' name='description'>
+<meta content='Qwiklabs' name='author'>
+<meta content='Distributed Multi-worker TensorFlow Training on Kubernetes | Qwiklabs' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='/favicon-144.png' property='og:image'>
+<meta content='Qwiklabs' property='og:site_name'>
+<meta content='In this hands-on lab you will explore using Google Cloud Kubernetes Engine and Kubeflow TFJob to scale out TensorFlow distributed training.' property='og:description'>
+<meta content='/qwiklabs_logo_900x887.png' property='og:logo' size='900x887'>
+<meta content='/qwiklabs_logo_994x187.png' property='og:logo' size='994x187'>
+
+
+<meta property="og:url" content="https://googlecoursera.qwiklabs.com/focuses/22568034?parent=lti_session" /><link href="https://googlecoursera.qwiklabs.com/focuses/22568034?parent=lti_session" rel="canonical" />
+<link color='#3681E4' href='/favicon-svg.svg' rel='mask-icon'>
+<link href='/favicon-180.png' rel='apple-touch-icon-precomposed'>
+<link href='/favicon-32.png' rel='shortcut icon' type='image/x-icon'>
+
+
+
+<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Oswald:400|Roboto+Mono:400,700|Roboto:300,400,500,700|Google+Sans:300,400,500,700|Google+Sans+Display:400|Material+Icons|Google+Material+Icons" />
+
+
+<link rel="stylesheet" media="all" href="https://cdn.qwiklabs.com/assets/application-56818f4340459c5a088e2aa59f60387314dbb4bcd72ea9a7501ad37b27b3e3d9.css" />
+
+<style>
+  :root {
+    --primary-text-on-surface-color: #1a73e8;
+    --primary-text-on-surface-color-dark: #1568d6;
+    --primary-text-on-surface-color-darker: #135ec1;
+    --primary-text-on-surface-color-darkest: #1154ac;
+    --primary-surface-color: #1a73e8;
+    --primary-surface-color-rgb: 26,115,232;
+    --primary-surface-color-light: #d1e3fa;
+    --primary-surface-color-lightest: #e8f1fd;
+    --text-on-primary-color: #ffffff;
+    --accent-text-on-surface-color: #f29900;
+    --accent-surface-color: #f9ab00;
+    --accent-surface-color-rgb: 249,171,0;
+    --accent-surface-color-light: #ffefcc;
+    --text-on-accent-color: #202124;
+  }
+</style>
+
+
+
+</head>
+<body class='lab-show l-full no-nav application-new focuses focuses-show lab-show l-full no-nav '>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-5XSKHDX' style='display:none;visibility:hidden;' width='0'></iframe>
+</noscript>
+<div class='header-container'>
+<div class='header'>
+<ql-toolbar jumpEnabled>
+<div class='header__title' slot='title'>
+<ql-icon-button label="Back" href="https://www.coursera.org/" id="9edc3864eecf023a" target="_self" tip="Back">arrow_back</ql-icon-button>
+<h1 class='ql-headline-6'>Distributed Multi-worker TensorFlow Training on Kubernetes</h1>
+</div>
+<div class='header__actions' slot='action'>
+<ql-icon-button id='control-panel-target' style='display: none;'>
+dashboard
+</ql-icon-button>
+<ql-menu for='control-panel-target' id='control-panel-menu'></ql-menu>
+<ql-icon-button class='mobile-hide' icon='help_outline' id='help-menu-button' label='Open help menu' tip='Help'></ql-icon-button>
+<ql-menu for='help-menu-button' id='help-menu'>
+<ql-menu-item data-analytics-action='opened_help' data-analytics-label='lab' label='Help Center' onclick='hallofmirrors.helpService.startHelp({&quot;productData&quot;:{&quot;userId&quot;:8102214},&quot;context&quot;:&quot;lab&quot;})'></ql-menu-item>
+<ql-menu-item href='https://support.google.com/qwiklabs/contact/contact_us' label='Email support' target='_blank'></ql-menu-item>
+<ql-menu-item label='Chat support' onClick='ql.chat.open()'></ql-menu-item>
+</ql-menu>
+
+<ql-icon-button class='mobile-hide' icon='language' id='language' label='Select your language preference' tip='Language'></ql-icon-button>
+<ql-menu for='language'>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='ar' href='/focuses/22568034?locale=ar&amp;parent=lti_session' label='العربية‬‎' lang='ar'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='de' href='/focuses/22568034?locale=de&amp;parent=lti_session' label='Deutsch' lang='de'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='en' href='/focuses/22568034?locale=en&amp;parent=lti_session' label='English' lang='en'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='es' href='/focuses/22568034?locale=es&amp;parent=lti_session' label='español (Latinoamérica)' lang='es'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='fr' href='/focuses/22568034?locale=fr&amp;parent=lti_session' label='français' lang='fr'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='fr_CA' href='/focuses/22568034?locale=fr_CA&amp;parent=lti_session' label='français (Canada)' lang='fr-CA'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='he' href='/focuses/22568034?locale=he&amp;parent=lti_session' label='עברית' lang='he'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='id' href='/focuses/22568034?locale=id&amp;parent=lti_session' label='bahasa Indonesia' lang='id'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='it' href='/focuses/22568034?locale=it&amp;parent=lti_session' label='Italiano' lang='it'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='ja' href='/focuses/22568034?locale=ja&amp;parent=lti_session' label='日本語' lang='ja'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='ko' href='/focuses/22568034?locale=ko&amp;parent=lti_session' label='한국어' lang='ko'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='pl' href='/focuses/22568034?locale=pl&amp;parent=lti_session' label='Polski' lang='pl'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='pt_BR' href='/focuses/22568034?locale=pt_BR&amp;parent=lti_session' label='português (Brasil)' lang='pt-BR'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='pt_PT' href='/focuses/22568034?locale=pt_PT&amp;parent=lti_session' label='português (Portugal)' lang='pt-PT'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='ru' href='/focuses/22568034?locale=ru&amp;parent=lti_session' label='русский' lang='ru'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='tr' href='/focuses/22568034?locale=tr&amp;parent=lti_session' label='Türkçe' lang='tr'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='uk' href='/focuses/22568034?locale=uk&amp;parent=lti_session' label='український' lang='uk'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='zh' href='/focuses/22568034?locale=zh&amp;parent=lti_session' label='简体中文' lang='zh'></ql-menu-item>
+<ql-menu-item data-analytics-action='changed_locale' data-analytics-label='zh_TW' href='/focuses/22568034?locale=zh_TW&amp;parent=lti_session' label='繁體中文' lang='zh-TW'></ql-menu-item>
+</ql-menu>
+
+<ql-icon-button id='my_account' label='My account' tip='My account'>
+<ql-avatar></ql-avatar>
+</ql-icon-button>
+<ql-menu for='my_account' id='my_account_menu' style='max-height: 640px'>
+<div class='my-account-menu'>
+<ql-avatar class='l-mtl l-mbl' size='120'></ql-avatar>
+<div class='my-account-menu__user-info l-mbl'>
+<h4 class='ql-subhead-1'>Khoa Nguyen</h4>
+<p class='ql-body-2 text--light'>dknguyen.learn@gmail.com</p>
+<p class='ql-body-2 text--light'>
+</p>
+<a class="text--green ql-subhead-2" href="/my_account/payments"><ql-chip positive>
+0 Credits
+</ql-chip>
+</a></div>
+<div class='buttons l-mbl'>
+<a class="button button--hairline" id="settings" href="/my_account/profile">Settings</a>
+</div>
+<hr>
+<ql-button data-analytics-action='clicked_sign_out' href='/users/sign_out' method='delete'>
+Sign Out
+</ql-button>
+<div class='privacy l-mtl'>
+<a target="_blank" class="ql-caption text--light" href="/privacy_policy">Privacy</a>
+<span class='ql-caption text--light l-mls l-mrs'>&middot;</span>
+<a class="ql-caption text--light" href="/terms_of_service">Terms</a>
+</div>
+</div>
+</ql-menu>
+
+</div>
+</ql-toolbar>
+
+</div>
+</div>
+
+<nav class='nav-panel js-nav-panel'>
+<div class='nav-panel__logo'>
+<div class="custom-logo">Qwiklabs</div>
+</div>
+<nav class='ql-sidenav'>
+<ql-sidenav-item href='/' icon='home' label='Home'></ql-sidenav-item>
+
+<ql-sidenav-item href='/catalog' icon='school' label='Catalog'></ql-sidenav-item>
+
+<ql-sidenav-item href='/profile' icon='event_note' label='Profile'></ql-sidenav-item>
+
+</nav>
+
+</nav>
+<div class='nav-panel__overlay js-nav-toggle'></div>
+
+<main class='js-main' id='jump-content'>
+<div class='l-main-wrapper' id='main-wrapper'>
+
+
+
+
+<div class='lab-assessment__tab js-open-lab-assessment-panel'>
+<button class='js-lab-assessment-total-score'>
+—/100
+</button>
+</div>
+<div aria-labelledby='lab-assessment-checkpoint' class='lab-assessment__panel js-lab-assessment-panel' role='dialog'>
+<div class='lab-assessment__panel__header'>
+<h4 id='lab-assessment-checkpoint'>Checkpoints</h4>
+<ql-icon-button class='js-close-lab-assessment-panel' icon='arrow_forward' label='Close dialog'></ql-icon-button>
+</div>
+<div class='lab-assessment__step'>
+<p class='lab-assessment__step__title' id='lab-assessment-step-title'>
+Creating a GKE cluster
+</p>
+<div class='lab-assessment__step__action'>
+<ql-button class='js-show-run-step-button' description='Creating a GKE cluster' step_no='1'>
+Check my progress
+</ql-button>
+<p class='lab-assessment__step__score'>
+<span class='js-assessment-step-score-1'>
+</span>
+/ 25
+</p>
+</div>
+</div>
+
+<div class='lab-assessment__step'>
+<p class='lab-assessment__step__title' id='lab-assessment-step-title'>
+Deploying TFJob components
+</p>
+<div class='lab-assessment__step__action'>
+<ql-button class='js-show-run-step-button' description='Deploying TFJob components' step_no='2'>
+Check my progress
+</ql-button>
+<p class='lab-assessment__step__score'>
+<span class='js-assessment-step-score-2'>
+</span>
+/ 25
+</p>
+</div>
+</div>
+
+<div class='lab-assessment__step'>
+<p class='lab-assessment__step__title' id='lab-assessment-step-title'>
+Creating a Cloud Storage bucket
+</p>
+<div class='lab-assessment__step__action'>
+<ql-button class='js-show-run-step-button' description='Creating a Cloud Storage bucket' step_no='3'>
+Check my progress
+</ql-button>
+<p class='lab-assessment__step__score'>
+<span class='js-assessment-step-score-3'>
+</span>
+/ 20
+</p>
+</div>
+</div>
+
+<div class='lab-assessment__step'>
+<p class='lab-assessment__step__title' id='lab-assessment-step-title'>
+Submitting the TFJob
+</p>
+<div class='lab-assessment__step__action'>
+<ql-button class='js-show-run-step-button' description='Submitting the TFJob' step_no='4'>
+Check my progress
+</ql-button>
+<p class='lab-assessment__step__score'>
+<span class='js-assessment-step-score-4'>
+</span>
+/ 30
+</p>
+</div>
+</div>
+
+</div>
+<ql-drawer-container class='js-lab-state' data-analytics-payload='{&quot;label&quot;:&quot;Distributed Multi-worker TensorFlow Training on Kubernetes&quot;,&quot;lab_name&quot;:&quot;Distributed Multi-worker TensorFlow Training on Kubernetes&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;googlecoursera-run&quot;}' data-focus-id='22568034' data-lab-billing-limit='0.0' data-lab-duration='5400' data-parent='lti_session' data-recaptcha-enabled id='lab-container'>
+<ql-drawer id='terminal-drawer' slot='drawer' style='width: calc(100% - 480px)'>
+<iframe allow='clipboard-read' class='terminal' id='embedded-resource'></iframe>
+</ql-drawer>
+<ql-drawer-content class='js-lab-wrapper' id='lab-content' slot='drawer-content'>
+<ql-drawer-container id='lab-content-container'>
+<ql-drawer id='control-panel-drawer' open slot='drawer' width='320'>
+<ql-lab-control-panel class='ql-lab-control-panel__max-height control-panel js-lab-control-panel' connectionFiles='[]' labControlButton='{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}' labDetails='[]' labTimer='{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:5400}' studentResources='[]'>
+<script src="https://www.recaptcha.net/recaptcha/api.js?render=6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr"   ></script>
+        <script>
+          // Define function so that we can call it again later if we need to reset it
+          // This executes reCAPTCHA and then calls our callback.
+          function executeRecaptchaForStartLab() {
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr', {action: 'start_lab'}).then(function(token) {
+                setInputWithRecaptchaResponseTokenForStartLab('g-recaptcha-response-data-start-lab', token)
+              });
+            });
+          };
+          // Invoke immediately
+          executeRecaptchaForStartLab()
+
+          // Async variant so you can await this function from another async function (no need for
+          // an explicit callback function then!)
+          // Returns a Promise that resolves with the response token.
+          async function executeRecaptchaForStartLabAsync() {
+            return new Promise((resolve, reject) => {
+             grecaptcha.ready(async function() {
+                resolve(await grecaptcha.execute('6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr', {action: 'start_lab'}))
+              });
+            })
+          };
+
+                    var setInputWithRecaptchaResponseTokenForStartLab = function(id, token) {
+            var element = document.getElementById(id);
+            element.value = token;
+          }
+
+        </script>
+<input type="hidden" name="g-recaptcha-response-data[start_lab]" id="g-recaptcha-response-data-start-lab" data-sitekey="6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr" class="g-recaptcha g-recaptcha-response "/>
+
+<div aria-live='polite' class='hidden' id='recaptcha-v2-start-lab' slot='recaptcha'>
+<script src="https://www.recaptcha.net/recaptcha/api.js" async defer ></script>
+<div data-sitekey="6LeOI8IUAAAAAPkHlMAE9NReCD_1WD81iYlBlCnV" data-callback="recaptchaComplete" data-expired-callback="expireV2Token" class="g-recaptcha "></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative;">
+                <div style="width: 302px; height: 422px; position: absolute;">
+                  <iframe
+                    src="https://www.recaptcha.net/recaptcha/api/fallback?k=6LeOI8IUAAAAAPkHlMAE9NReCD_1WD81iYlBlCnV"
+                    name="ReCAPTCHA"
+                    style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+                  </iframe>
+                </div>
+              </div>
+              <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+              </div>
+            </div>
+          </noscript>
+
+</div>
+</ql-lab-control-panel>
+</ql-drawer>
+<ql-drawer-content id='lab-instructions' slot='drawer-content'>
+<ql-snackbar id='alert-snackbar'></ql-snackbar>
+<div class='alert alert--fake js-alert'>
+<p class='alert__message js-alert-message' role='alert'></p>
+<ql-icon-button class='alert__close js-alert-close' icon='clear'></ql-icon-button>
+<iframe class='l-ie-iframe-fix' tabindex='-1'></iframe>
+</div>
+<div class='lab-content__renderable-instructions js-lab-content'>
+<div class='lab-preamble'>
+<h1 class='lab-preamble__title'>
+Distributed Multi-worker TensorFlow Training on Kubernetes
+</h1>
+<div class='lab-preamble__details subtitle-headline-1'>
+<span>1 hour 30 minutes</span>
+<span>Free</span>
+<div class='lab__rating'>
+<a aria-label="Lab Reviews" href="/focuses/22568034/reviews?parent=lti_session"><div class='rateit' data-rateit-readonly='true' data-rateit-value='3.8496'></div>
+
+</a></div>
+</div>
+</div>
+<div class='lab-outline-place-holder'></div>
+
+<div class='markdown-lab-instructions js-markdown-instructions' id='markdown-lab-instructions'>
+
+<h2 id="step1">GSP775</h2>
+<p><img alt="Google Cloud selp-paced labs logo" src="https://cdn.qwiklabs.com/GMOHykaqmlTHiqEeQXTySaMXYPHeIvaqa2qHEzw6Occ%3D"></p>
+<h2 id="step2">Overview</h2>
+<p>Large Deep Neural Networks (DNNs) have emerged as a critical component of many modern applications across all industries. Accelerating training for the ever increasing size of datasets and deep neural network models is a major challenge facing organizations adopting DNNs. The use of hardware accelerators and distributed clusters is becoming mainstream.</p>
+<p>In this hands-on lab, you will explore using <a href="https://cloud.google.com/kubernetes-engine" target="_blank">Google Kubernetes Engine (GKE)</a> and <a href="https://www.kubeflow.org/docs/components/training/tftraining/" target="_blank">Kubeflow TFJob</a> to scale out TensorFlow distributed training.</p>
+<h3>Objectives</h3>
+<p>In this lab, you will learn how to:</p>
+<ul>
+<li>
+<p>Deploy <strong>TFJob</strong> components to Google Kubernetes Engine.</p>
+</li>
+<li>
+<p>Configure multi-worker distributed training jobs using <strong>TFJob</strong>.</p>
+</li>
+<li>
+<p>Submit and monitor <strong>TFJob</strong> jobs.</p>
+</li>
+</ul>
+<h3>Prerequisites</h3>
+<p>To successfully complete the lab you need to have a solid understanding of TensorFlow distributed training and a basic familiarity with Kubernetes concepts and architecture. Before proceeding with the lab we recommend reviewing the following resources:</p>
+<ul>
+<li>
+<p><a href="https://www.tensorflow.org/guide/distributed_training" target="_blank">Distributed training with TensorFlow</a></p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/concepts/overview/" target="_blank">Kubernetes Overview</a></p>
+</li>
+</ul>
+<h3>Lab scenario</h3>
+<p>You will train an MNIST classification model using <a href="https://www.tensorflow.org/guide/distributed_training#multiworkermirroredstrategy" target="_blank">TensorFlow multi-worker distributed strategy</a>. You  will use <a href="https://www.kubeflow.org/docs/components/training/tftraining/" target="_blank">Kubeflow TFJob</a> to configure, submit and monitor distributed training jobs on a Google Kubernetes Cluster (GKE).</p>
+<p><strong>TFJob</strong> is a Kubernetes <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/" target="_blank">custom resource</a> designed to support TensorFlow distributed training algorithms. It is flexible enough to support process topologies for both <a href="https://www.tensorflow.org/guide/distributed_training#parameterserverstrategy" target="_blank">Parameter Server</a> and <a href="https://www.tensorflow.org/guide/distributed_training#multiworkermirroredstrategy" target="_blank">Mirrored</a> distributed strategies.</p>
+<p><strong>TFJob</strong> supports the following distributed training roles:</p>
+<ul>
+<li>
+<strong>Chief</strong>. The chief is responsible for orchestrating training and performing tasks like checkpointing the model.</li>
+<li>
+<strong>Ps</strong>. The parameter servers provide a distributed data store for the model parameters.</li>
+<li>
+<strong>Worker</strong>. The workers do the actual work of training the model. In some cases, worker 0 might also act as the chief.</li>
+<li>
+<strong>Evaluator</strong>. The evaluators can be used to compute evaluation metrics as the model is trained.</li>
+</ul>
+<p><strong>TFJob</strong> automatically sets the <code>TF_CONFIG</code> environment variable in each of the configured pods to reflect the job's topology. The <a href="https://www.tensorflow.org/guide/distributed_training#setting_up_tf_config_environment_variable" target="_blank">TF_CONFIG</a> variable is required by TensorFlow for multi-worker settings.</p>
+<p>In the lab, you will configure a job with three <strong>Workers</strong>. All workers use the same container image and execute the same training code. The training code checks the type of  worker it is running on and performs addtional tasks on the <strong>Chief</strong> (Worker with the index 0). Specifically, at the end of training it saves the trained model to a persistent storage location specified as one of the script's arguments. In the lab, you will use <a href="https://cloud.google.com/storage" target="_blank">Cloud Storage</a>.</p>
+<p>The training code is designed to recover from failures that may happen during the training. It uses <a href="https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/experimental/BackupAndRestore" target="_blank">BackupAndRestore callback</a> to automatically save checkpoints at the end of each training epoch. The checkpoints are also stored in <strong>Cloud Storage</strong>.</p>
+<p>During the lab you will perform the following tasks:</p>
+<ul>
+<li>
+<p>Create a <strong>GKE</strong> cluster</p>
+</li>
+<li>
+<p>Deploy <strong>TFJob</strong> components</p>
+</li>
+<li>
+<p>Configure a <strong>TFJob</strong> manifest</p>
+</li>
+<li>
+<p>Submit and monitor the configured <strong>TFJob</strong></p>
+</li>
+</ul>
+<h2 id="step3">Setup and requirements</h2>
+<h3>Before you click the Start Lab button</h3>
+<p>Read these instructions. Labs are timed and you cannot pause them. The timer, which starts when you click <strong>Start Lab</strong>, shows how long Google Cloud resources will be made available to you.</p>
+<p>This hands-on lab lets you do the lab activities yourself in a real cloud environment, not in a simulation or demo environment. It does so by giving you new, temporary credentials that you use to sign in and access Google Cloud for the duration of the lab.</p>
+<p>To complete this lab, you need:</p>
+<ul>
+<li>Access to a standard internet browser (Chrome browser recommended).</li>
+</ul>
+<ql-warningbox>
+<strong>Note:</strong> Use an Incognito or private browser window to run this lab. This prevents any conflicts between your personal account and the Student account, which may cause extra charges incurred to your personal account.
+</ql-warningbox>
+<ul>
+<li>Time to complete the lab---remember, once you start, you cannot pause a lab.</li>
+</ul>
+<ql-warningbox>
+<strong>Note:</strong> If you already have your own personal Google Cloud account or project, do not use it for this lab to avoid extra charges to your account.
+</ql-warningbox>
+<h3>How to start your lab and sign in to the Google Cloud Console</h3>
+<ol>
+<li>
+<p>Click the <strong>Start Lab</strong> button. If you need to pay for the lab, a pop-up opens for you to select your payment method.
+On the left is the <strong>Lab Details</strong> panel with the following:</p>
+<ul>
+<li>The <strong>Open Google Console</strong> button</li>
+<li>Time remaining</li>
+<li>The temporary credentials that you must use for this lab</li>
+<li>Other information, if needed, to step through this lab</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Open Google Console</strong>.
+The lab spins up resources, and then opens another tab that shows the <strong>Sign in</strong> page.</p>
+<p><strong><em>Tip:</em></strong> Arrange the tabs in separate windows, side-by-side.</p>
+<ql-infobox>
+<strong>Note: </strong>If you see the <strong>Choose an account</strong> dialog, click <strong>Use Another Account</strong>.        
+ </ql-infobox>
+</li>
+<li>
+<p>If necessary, copy the <strong>Username</strong> from the <strong>Lab Details</strong> panel and paste it into the <strong>Sign in</strong> dialog. Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Copy the <strong>Password</strong> from the <strong>Lab Details</strong> panel and paste it into the <strong>Welcome</strong> dialog. Click <strong>Next</strong>.</p>
+<ql-infobox>
+<strong>Important: </strong>You must use the credentials from the left panel. Do not use your Google Cloud Skills Boost credentials. 
+ </ql-infobox>
+<ql-warningbox>
+<strong>Note: </strong>Using your own Google Cloud account for this lab may incur extra charges.
+ </ql-warningbox>
+</li>
+<li>
+<p>Click through the subsequent pages:</p>
+<ul>
+<li>Accept the terms and conditions.</li>
+<li>Do not add recovery options or two-factor authentication (because this is a temporary account).</li>
+<li>Do not sign up for free trials.</li>
+</ul>
+</li>
+</ol>
+<p>After a few moments, the Cloud Console opens in this tab.</p>
+<ql-infobox>
+<strong>Note:</strong> You can view the menu with a list of Google Cloud Products and Services by clicking the <strong>Navigation menu</strong> at the top-left.
+<img alt="Navigation menu icon" src="https://cdn.qwiklabs.com/9vT7xPlxoNP%2FPsK0J8j0ZPFB4HnnpaIJVCDByaBrSHg%3D">
+</ql-infobox>
+<h3>Activate Cloud Shell</h3>
+<p>Cloud Shell is a virtual machine that is loaded with development tools. It offers a persistent 5GB home directory and runs on the Google Cloud. Cloud Shell provides command-line access to your Google Cloud resources.</p>
+<ol>
+<li>In the Cloud Console, in the top right toolbar, click the <strong>Activate Cloud Shell</strong> button.</li>
+</ol>
+<p><img alt="Cloud Shell icon" src="https://cdn.qwiklabs.com/vdY5e%2Fan9ZGXw5a%2FZMb1agpXhRGozsOadHURcR8thAQ%3D"></p>
+<ol start="2">
+<li>Click <strong>Continue</strong>.</li>
+</ol>
+<p>It takes a few moments to provision and connect to the environment. When you are connected, you are already authenticated, and the project is set to your <strong>PROJECT_ID</strong>. The output contains a line that declares the <strong>PROJECT_ID</strong> for this session:</p>
+<ql-code-block output="">
+Your Cloud Platform project in this session is set to YOUR_PROJECT_ID
+</ql-code-block>
+<p><code>gcloud</code> is the command-line tool for Google Cloud. It comes pre-installed on Cloud Shell and supports tab-completion.</p>
+<ol start="3">
+<li>
+<p>(Optional) You can list the active account name with this command:</p>
+</li>
+</ol>
+<ql-code-block language="plaintext">
+gcloud auth list
+</ql-code-block>
+<p>(Output)</p>
+<ql-code-block language="plaintext" output="">
+ACTIVE: *
+ACCOUNT: student-01-xxxxxxxxxxxx@qwiklabs.net
+To set the active account, run:
+    $ gcloud config set account `ACCOUNT`
+</ql-code-block>
+<ol start="4">
+<li>
+<p>(Optional) You can list the project ID with this command:</p>
+</li>
+</ol>
+<ql-code-block language="plaintext">
+gcloud config list project
+</ql-code-block>
+<p>(Output)</p>
+<ql-code-block language="plaintext" output="">
+[core]
+project = &lt;project_ID&gt;
+</ql-code-block>
+<p>(Example output)</p>
+<ql-code-block language="plaintext" output="">
+[core]
+project = qwiklabs-gcp-44776a13dea667a6
+</ql-code-block>
+<ql-infobox>
+  For full documentation of <code>gcloud</code>, in Google Cloud, Cloud SDK documentation, see the <a href="https://cloud.google.com/sdk/gcloud" target="_blank">gcloud command-line tool overview</a>.
+</ql-infobox>
+<h2 id="step4">Lab tasks</h2>
+<p>You will use <strong>Cloud Shell</strong> for all of the tasks in the lab. Some tasks require you to edit text files. You can use any of the classic command line text
+editors pre-installed in <strong>Cloud Shell</strong>, including <em>vim</em>, <em>emacs</em>, or <em>nano</em>. You can also use the built-in <a href="https://cloud.google.com/shell/docs/launching-cloud-shell-editor" target="_blank">Cloud Shell Editor</a>.</p>
+<p>Before proceeding, make sure that you completed the <strong>Activate Cloud Shell</strong> step in the <strong>Qwiklabs setup</strong> instructions and your <strong>Cloud Shell</strong> is open and ready.</p>
+<h3>Creating a GKE cluster</h3>
+<p>For the purpose of the lab, you will create a small, CPU-based GKE cluster. The MNIST classifier DNN used in the lab is very simple
+so the training process does not require accelerated hardware or a large number of nodes. In most commercial settings, where you train/fine-tune industrial grade NLP or Computer Vision models, larger clusters with accelerated hardware will be necessary. Nevertheless, the techniques and patterns demonstrated in this lab using a simplified cluster configuration are transferable to more complex scenarios.</p>
+<p>Start by setting the default compute zone and a couple of environment variables:</p>
+<ql-code-block language="plaintext">
+gcloud config set compute/zone us-central1-f
+PROJECT_ID=$(gcloud config get-value project)
+CLUSTER_NAME=cluster-1
+</ql-code-block>
+<p>Now, create the cluster. The below command may take a few minutes to complete.</p>
+<ql-code-block language="plaintext">
+gcloud container clusters create $CLUSTER_NAME \
+  --project=$PROJECT_ID \
+  --release-channel=stable \
+  --machine-type=n1-standard-4 \
+  --scopes compute-rw,gke-default,storage-rw \
+  --num-nodes=3
+</ql-code-block>
+<p>After the cluster has started, configure access credentials so you can interact with the cluster using <code>kubectl</code>.</p>
+<ql-code-block language="plaintext">
+gcloud container clusters get-credentials $CLUSTER_NAME
+</ql-code-block>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="1">
+Creating a GKE cluster
+</ql-activity-tracking></p>
+<h3>Deploying <code>TFJob</code> components</h3>
+<p><a href="https://www.kubeflow.org/docs/components/training/tftraining/" target="_blank">TFJob</a> is a component of <a href="https://www.kubeflow.org/" target="_blank">Kubeflow</a>. It is usually deployed as  part of a full <strong>Kubeflow</strong> installation but can also be used in a standalone configuration. In this lab, you will install <strong>TFJob</strong> as a standalone component.</p>
+<p><strong>TFJob</strong> consists of two parts: a Kubernetes <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/" target="_blank">custom resource</a> and an <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/operator/" target="_blank">operator</a> implementing the job management logic. Kubernetes manifests for both the custom resource definition and the operator are managed in <strong>Kubeflow GitHub</strong> repository.</p>
+<p>Instead of cloning the whole repository you will retrieve the <strong>TFJob</strong> manifests only using an OSS tool - <a href="https://googlecontainertools.github.io/kpt/" target="_blank">kpt</a> - that is pre-installed in <strong>Cloud Shell</strong>.</p>
+<p>Get the manifests for TFJob from v1.1.0 of Kubeflow.</p>
+<ql-code-block language="plaintext">
+cd
+SRC_REPO=https://github.com/kubeflow/manifests
+kpt pkg get $SRC_REPO/tf-training@v1.1.0 tf-training
+</ql-code-block>
+<p>Create a Kubernetes namespace to host the <strong>TFJob</strong> operator.</p>
+<ql-code-block language="plaintext">
+kubectl create namespace kubeflow
+</ql-code-block>
+<p>Install the <strong>TFJob</strong> custom resource.</p>
+<ql-code-block language="plaintext">
+kubectl apply  --kustomize tf-training/tf-job-crds/base
+</ql-code-block>
+<p>Install the <strong>TFJob</strong> operator.</p>
+<ql-code-block language="plaintext">
+kubectl apply  --kustomize tf-training/tf-job-operator/base
+</ql-code-block>
+<p>Verify the installation</p>
+<ql-code-block language="plaintext">
+kubectl get deployments -n kubeflow
+</ql-code-block>
+<p>Notice that the TFJob operator is running as a <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/" target="_blank">Kubernetes Deployment</a>
+in the <code>kubeflow</code> namespace.</p>
+<p>It may take a couple of minutes before the deployment is ready.</p>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="2">
+Deploying TFJob components
+</ql-activity-tracking></p>
+<h3>Creating a Cloud Storage bucket</h3>
+<p>As described in the lab overview, the distributed training script stores training checkpoints and the trained model in the <em>SavedModel</em> format to the storage location passed as one of the script's arguments. You will use a <strong>Cloud Storage</strong> bucket as a shared persistent storage.</p>
+<p>Since storage buckets are a global resource in Google Cloud you have to use a unique bucket name. For the purpose of this lab, you can use your project id as a name prefix.</p>
+<ql-code-block language="plaintext">
+export TFJOB_BUCKET=${PROJECT_ID}-bucket
+gsutil mb gs://${TFJOB_BUCKET}
+</ql-code-block>
+<p>Verify that the bucket was successfuly created.</p>
+<ql-code-block language="plaintext">
+gsutil ls
+</ql-code-block>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="3">
+Creating a Cloud Storage bucket
+</ql-activity-tracking></p>
+<h3>Preparing TFJob</h3>
+<p>Your distributed training environment is ready and you can now prepare and submit distributed training jobs.</p>
+<p>The TensorFlow training code and the <strong>TFJob</strong> manifest template used in the lab can be retrieved from <strong>GitHub</strong>.</p>
+<ql-code-block language="plaintext">
+cd
+SRC_REPO=https://github.com/GoogleCloudPlatform/mlops-on-gcp
+kpt pkg get $SRC_REPO/workshops/mlep-qwiklabs/distributed-training-gke lab-files
+cd lab-files
+</ql-code-block>
+<p>The training module is in the <code>mnist</code> folder. The <code>model.py</code> file contains a function to create a simple convolutional network.
+The <code>main.py</code> file contains data preprocessing routines and a distributed training loop. Review the files. Notice how you can use
+a <code>tf.distribute.experimental.MultiWorkerMirrorStrategy()</code> object to retrieve information about the topology of the distributed
+cluster running a job.</p>
+<ql-code-block language="plaintext">
+    strategy = tf.distribute.experimental.MultiWorkerMirroredStrategy()
+    task_type = strategy.cluster_resolver.task_type
+    task_id = strategy.cluster_resolver.task_id
+    global_batch_size = per_worker_batch * strategy.num_replicas_in_sync
+</ql-code-block>
+<p>You can also see how to configure automatic checkpointing using <code>tf.keras.callbacks.experimental.BackupAndRestore()</code>.</p>
+<ql-code-block language="plaintext">
+   callbacks = [
+        tf.keras.callbacks.experimental.BackupAndRestore(checkpoint_path)
+    ]
+    multi_worker_model.fit(dataset,
+                           epochs=epochs,
+                           steps_per_epoch=steps_per_epoch,
+                           callbacks=callbacks)
+</ql-code-block>
+<p>You can control the training loop by passing command line arguments to the <code>main.py</code> script. We will use it when configuring a <strong>TFJob</strong> manifest.</p>
+<h4>Packaging training code in a docker image</h4>
+<p>Before submitting the job, the training code must be packaged in a docker image and pushed into your project's <a href="https://cloud.google.com/container-registry" target="_blank">Container Registry</a>. You can find the Dockerfile that creates the image in the <code>lab-files</code> folder. You do not need to modify the Dockerfile.</p>
+<p>To build the image and push it to the registry execute the below commands.</p>
+<ql-code-block language="plaintext">
+IMAGE_NAME=mnist-train
+docker build -t gcr.io/${PROJECT_ID}/${IMAGE_NAME} .
+docker push gcr.io/${PROJECT_ID}/${IMAGE_NAME}
+</ql-code-block>
+<h4>Updating the TFJob manifest</h4>
+<p>The <code>tfjob.yaml</code> file is an example TFJob manifest.</p>
+<ql-code-block language="plaintext">
+apiVersion: kubeflow.org/v1
+kind: TFJob
+metadata:
+  name: multi-worker
+spec:
+  cleanPodPolicy: None
+  tfReplicaSpecs:
+    Worker:
+      replicas: 3
+      template:
+        spec:
+          containers:
+            - name: tensorflow
+              image: mnist
+              args:
+                - --epochs=5
+                - --steps_per_epoch=100
+                - --per_worker_batch=64
+                - --saved_model_path=gs://bucket/saved_model_dir
+                - --checkpoint_path=gs://bucket/checkpoints
+</ql-code-block>
+<p>As noted in the lab overview, you have a lot of flexibility in defining the job's process topology and allocating hardware resources. Please refer to
+the <a href="https://www.kubeflow.org/docs/components/training/tftraining/" target="_blank">TFJob guide</a> for more information.</p>
+<p>The key field in the TFJob manifest is <code>tfReplicaSpecs</code>, which defines the number and the types of replicas (pods) created by a job. In our case, the job
+will start 3 workers using the container image defined in the <code>image</code> field and command line arguments defined in the <code>args</code> field.</p>
+<p>Before submitting a job, you need to update the <code>image</code> and <code>args</code> fields with the values reflecting your environment.</p>
+<p>Use your preferred command line editor or <strong>Cloud Shell Editor</strong> to update the <code>image</code> field with a full name of the image you created and pushed to your
+<strong>Container Registry</strong> in the previous step. You can retrieve the image name using the following command.</p>
+<ql-code-block language="plaintext">
+gcloud container images list
+</ql-code-block>
+<p>The name should have the following format.</p>
+<ql-code-block language="plaintext">
+gcr.io/&lt;YOUR_PROJECT_ID&gt;/mnist-train
+</ql-code-block>
+<p>Next, update the <code>--saved_model_path</code> and <code>--checkpoint_path</code> arguments by replacing the <code>bucket</code> token with the name of your Cloud storage bucket. Recall that your bucket name is <code>[YOUR_PROJECT_ID]-bucket</code>.</p>
+<p>The updated manifest should look similar to the one below:</p>
+<ql-code-block language="plaintext">
+apiVersion: kubeflow.org/v1
+kind: TFJob
+metadata:
+  name: multi-worker
+spec:
+  cleanPodPolicy: None
+  tfReplicaSpecs:
+    Worker:
+      replicas: 3
+      template:
+        spec:
+          containers:
+          - name: tensorflow
+            image: gcr.io/qwiklabs-gcp-01-93af833e6576/mnist-train
+            args:
+            - --epochs=5
+            - --steps_per_epoch=100
+            - --per_worker_batch=64
+            - --saved_model_path=gs://qwiklabs-gcp-01-93af833e6576-bucket/saved_model_dir
+            - --checkpoint_path=gs://qwiklabs-gcp-01-93af833e6576-bucket/checkpoints
+</ql-code-block>
+<h4>Submitting the TFJob</h4>
+<p>You can now submit the job using <code>kubectl</code>.</p>
+<ql-code-block language="plaintext">
+kubectl apply -f tfjob.yaml
+</ql-code-block>
+<h4>Monitoring the TFJob</h4>
+<p>During execution, TFJob will emit events to indicate the status of the job, including creation/deletion of pods and services.</p>
+<p>You can retrieve the recent events and other information about the job by executing the following command.</p>
+<ql-code-block language="plaintext">
+JOB_NAME=multi-worker
+kubectl describe tfjob $JOB_NAME
+</ql-code-block>
+<p>Recall that the job name was specified in the job manifest.</p>
+<p>To retrieve logs generated by the training code you can use the <code>kubectl logs</code> command. Start by listing all pods created by the job.</p>
+<ql-code-block language="plaintext">
+kubectl get pods
+</ql-code-block>
+<p>Notice that the pods are named using the following convention <code>[JOB_NAME]-worker-[WORKER_INDEX]</code>.</p>
+<p>Wait till the status of all pods changes to <code>Running</code>.</p>
+<p>To retrieve the logs for the chief (worker 0) execute the following command. It will continue streaming the logs till the training program completes.</p>
+<ql-code-block language="plaintext">
+kubectl logs --follow ${JOB_NAME}-worker-0
+</ql-code-block>
+<p>After the job completes, the pods are not removed to allow for later inspection of logs.  For example, to check the logs created by worker 1:</p>
+<ql-code-block language="plaintext">
+kubectl logs ${JOB_NAME}-worker-1
+</ql-code-block>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="4">
+Submitting the TFJob
+</ql-activity-tracking></p>
+<p>To remove the job and the associated pods:</p>
+<ql-code-block language="plaintext">
+kubectl delete tfjob $JOB_NAME
+</ql-code-block>
+<h2 id="step5">Congratulations</h2>
+<p>This completes the lab.</p>
+<h3>Google Cloud Training &amp; Certification</h3>
+<p>...helps you make the most of Google Cloud technologies. <a href="https://cloud.google.com/training/courses" target="_blank">Our classes</a> include technical skills and best practices to help you get up to speed quickly and continue your learning journey. We offer fundamental to advanced level training, with on-demand, live, and virtual options to suit your busy schedule. <a href="https://cloud.google.com/certification/" target="_blank">Certifications</a> help you validate and prove your skill and expertise in Google Cloud technologies.</p>
+<h5>Manual Last Updated March 29, 2022</h5>
+<h5>Lab Last Tested September 7, 2021</h5>
+<p>Copyright 2022 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+</div>
+</div>
+
+
+<div class='lab-content__end-lab-button js-end-lab-button-container hidden'>
+<ql-lab-control-button class='js-end-lab-button' running></ql-lab-control-button>
+</div>
+<!-- / TODO: Move recommendations into the end lab modal -->
+</ql-drawer-content>
+<ql-drawer end id='outline-drawer' open slot='drawer' width='320'>
+<div aria-label='Lab Table of Contents' role='navigation'>
+<ul class='lab-content__outline js-lab-content-outline'>
+<li><a href='#step1'>GSP775</a></li><li><a href='#step2'>Overview</a></li><li><a href='#step3'>Setup and requirements</a></li><li><a href='#step4'>Lab tasks</a></li><li><a href='#step5'>Congratulations</a></li>
+</ul>
+</div>
+</ql-drawer>
+</ql-drawer-container>
+</ql-drawer-content>
+</ql-drawer-container>
+
+
+
+</div>
+</main>
+
+<span class='hidden' id='flash-sibling-before'></span>
+<ql-snackbar></ql-snackbar>
+
+<div class='cookie-bar'>
+<span>
+This site uses cookies from Google to deliver its services and to analyze traffic.
+</span>
+<div class='buttons'>
+<a class='button' href='https://policies.google.com/technologies/cookies' target='_blank'>
+Learn More.
+</a>
+<button class='button button--inverted js-accept-cookies'>
+Ok, Got it.
+</button>
+</div>
+</div>
+
+<div class='modal fade' id='lab-details-modal'>
+<div class='modal-container'>
+<div class='modal-content mdl-shadow--24dp'>
+<div class='modal-body'>
+<p class='l-mbm'>
+In this hands-on lab you will explore using Google Cloud Kubernetes Engine and Kubeflow TFJob to scale out TensorFlow distributed training.
+</p>
+<p class='small-label l-mbs'>
+<strong>
+Duration:
+</strong>
+0m setup
+&middot;
+90m access
+&middot;
+90m completion
+</p>
+<p class='small-label l-mbs'>
+<strong>AWS Region:</strong>
+[] <strong></strong>
+</p>
+<p class='small-label l-mbs'>
+<span><strong>Levels: </strong>intermediate</span>
+</p>
+<p class='small-label'>
+<strong>
+Permalink:
+</strong>
+<a href="https://googlecoursera.qwiklabs.com/catalog_lab/3384">https://googlecoursera.qwiklabs.com/catalog_lab/3384</a>
+</p>
+</div>
+<div class='modal-actions'>
+<a class='button button--text' data-dismiss='modal'>
+Got It
+</a>
+</div>
+
+
+</div>
+</div>
+<iframe class='l-ie-iframe-fix' tabindex='-1' title='modal'></iframe>
+</div>
+<ql-dialog headline='How satisfied are you with this lab?&lt;span aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;' id='lab-review-dialog'>
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><div aria-labelledby='lab-review-dialog' aria-required='true' aria-valuemax='5' aria-valuemin='0' aria-valuenow='0' class='rateit js-rateit' data-rateit-max='5' data-rateit-min='0' data-rateit-resetable='false' data-rateit-step='1' data-rateit-value='0' id='lab-review-rateit' role='slider' tabindex='0'></div>
+<div class='l-mtm'>
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" autocomplete="off" type="hidden" value="8102214" name="lab_review[user_id]" id="lab_review_user_id" /></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" autocomplete="off" type="hidden" name="lab_review[classroom_id]" id="lab_review_classroom_id" /></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" autocomplete="off" type="hidden" value="3384" name="lab_review[lab_id]" id="lab_review_lab_id" /></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" autocomplete="off" type="hidden" name="lab_review[focus_id]" id="lab_review_focus_id" /></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" autocomplete="off" type="hidden" name="lab_review[rating]" id="lab_review_rating" /></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Additional Comments</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment">
+</textarea></div></div>
+</div>
+</form><ql-button disabled id='submit' label='Submit' slot='action' text></ql-button>
+</ql-dialog>
+
+<ql-dialog headline='All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?' icon='error_outline' id='js-lab-are-you-sure-dialog'>
+<ql-button id='js-are-you-sure-button' label='Submit' slot='action' text></ql-button>
+</ql-dialog>
+
+
+<script>
+  $(function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    ql.chat.init();
+  ql.jumpContent.init();
+  ql.labControlPanel.addRecaptchaErrorHandler();
+  initLabContent();
+  ql.labOutline.links.init();
+  initLabReviewModal();
+  initLabReviewTranslations( {"star_amount_1":"1 of 5 stars","star_amount_2":"2 of 5 stars","star_amount_3":"3 of 5 stars","star_amount_4":"4 of 5 stars","star_amount_5":"5 of 5 stars"} )
+  ql.labAssessment.init();
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+
+</body>
+</html>
+
