@@ -6,4 +6,4 @@ In this assignment, we will scale out TensorFlow distributed training using Goog
 3. Submit and monitor `TFJob` jobs.
 
 ## Environment
-We use Qwiklabs and Google Cloud Platform in this assignment with instructions in the file `DistributedMulti-workerTensorFlowTrainingOnKubernetes-Qwiklabs.html`.
+We use Qwiklabs and Google Cloud Platform in this assignment with instructions in `DistributedMulti-workerTensorFlowTrainingOnKubernetes-Qwiklabs.html`.
