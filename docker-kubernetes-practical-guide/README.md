@@ -21,3 +21,4 @@ In this course, we will learn Docker, Docker Compose, projects that contain mult
 - Learn how to deploy Kubernetes project (at the example of AWS EKS)
 
 ## Projects
+1. [Deploy a simple web app that prints out `Hi there!` using Docker](./1.first-demo/)
