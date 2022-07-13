@@ -20,5 +20,7 @@ In this course, we will learn Docker, Docker Compose, projects that contain mult
 - Kubernetes networking and DNS service discovery
 - Learn how to deploy Kubernetes project (at the example of AWS EKS)
 
+![overview](./course-overview.png "course overview")
+
 ## Projects
 1. [Deploy a simple web app that prints out `Hi there!` using Docker](./1.hi-there/)
