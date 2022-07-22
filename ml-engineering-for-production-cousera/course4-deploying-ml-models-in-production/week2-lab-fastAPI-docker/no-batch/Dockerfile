@@ -1,3 +1,4 @@
+# The FROM instruction allows you to select a pre-existing image as the base for your new image.
 FROM frolvlad/alpine-miniconda3:python3.7
 
 COPY requirements.txt .
