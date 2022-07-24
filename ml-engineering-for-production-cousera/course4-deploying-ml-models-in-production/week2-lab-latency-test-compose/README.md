@@ -91,7 +91,7 @@ Before spinning up this multi-container application, let's take some time to und
 
 By convention the file that handles the locust logic is named `locustfile.py`. Unlike Dockerfiles, this file is a regular python script. Remember you can take a look at the complete file in this repo.
 
-The way locust works is by simulating users that will constantly send requests to your services. By doing this you can measure things like `RPS` (requests per second) or the average time each request is taking. **This is great to understand the limitations of your servers and to test if they will work under the circumstances they will be exposed once they are launched into production.**
+The way locust works is by simulating users that will constantly send requests to your services By doing this you can measure things like `RPS` (requests per second) or the average time each request is taking. **This is great to understand the limitations of your servers and to test if they will work under the circumstances they will be exposed once they are launched into production.**
 
 Using locust is actually quite straightforward. First you need to create a new class that inherits from `locust.HttpUser` and within this class you need to specify a method for every service you want to test. These functions should be decorated with the `locust.task` decorator. 
 
@@ -196,7 +196,7 @@ Now head over to [http://localhost:8089/](http://localhost:8089/) and you will s
 
 Now click on the `Start swarming` button and the load test will start. You will see a dashboard that looks like this:
 
-![locust](../../assets/locust-home.png)
+![locust](./locust-home.png)
 
 Each row corresponds to a service you are testing. You can tell which is which by looking at the name (these were defined in the `locustfile.py`). 
 
