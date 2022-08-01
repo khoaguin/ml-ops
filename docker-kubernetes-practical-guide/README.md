@@ -1,7 +1,7 @@
 # Docker & Kubernetes: The Practical Guide - Udemy
 ![banner](./banner.png "course banner")
 
-Repo for the course [Docker & Kubernetes: The Practical Guide [2022 Edition] - Udemy](https://www.udemy.com/course/docker-kubernetes-the-practical-guide/)
+Welcome to my repo for the course [Docker & Kubernetes: The Practical Guide [2022 Edition] - Udemy](https://www.udemy.com/course/docker-kubernetes-the-practical-guide/). Here you will find my course notes and projects for the course.
 
 ## About this course
 In this course, we will learn Docker, Docker Compose, projects that contain multiple containers, deployment and all about Kubernetes from the ground up! More specifically, we will learn the following topics:

@@ -1,13 +1,14 @@
 # Machine Learning Engineering for Production Specialization - Coursera
 ![logo](./specialization-logo.png "specialization logo")
 
-Labs and assignments for [DeepLearning.AI](https://www.deeplearning.ai/)'s [Machine Learning Engineering for Production Specialization](https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops?). 
+Welcome to my repo for the [DeepLearning.AI](https://www.deeplearning.ai/)'s [Machine Learning Engineering for Production Specialization](https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops?). Here you will find my notes, labs and assignments for the specialization. 
 
 ## About this Specialization
 ![mlops](./mlops-overview.png "the mlops process")
 
 ## Courses
 
+## Notes
 ### [Link to Specialization Notes (in English)](https://khoaguin.notion.site/MLOps-Machine-Learning-Engineering-for-Production-Specialization-Coursera-7767e8d8d1504e31aefe31b4095a5052)
 
 ## Why this Specialization?
