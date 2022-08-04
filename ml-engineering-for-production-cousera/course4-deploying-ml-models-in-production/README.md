@@ -7,4 +7,4 @@ In the fourth course of Machine Learning Engineering for Production Specializati
 
 
 ## Certification
-<!-- ![certification](./certificate.png "course certification") -->
+![certification](./certificate.png "course certification")
