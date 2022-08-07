@@ -6,8 +6,10 @@ As part of Full Stack Deep Learning 2022, we will incrementally develop a comple
 
 ## 1. Lab 0: Overview 
 In the first lab, we go through the overview of the text recognizer app that demonstrates core principles and tools of an ML-powered application.
+
 ![text-recognizer-app](./images/text-recognizer-app.png)  
 
 The diagram below shows the entire process and tools needed for training and running the text recognizer app. 
+
 ![text-recognizer-app](./images/app-diagram.png)  
 
