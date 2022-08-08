@@ -28,7 +28,13 @@ In this lab, we will learn
 - How to write a basic neural network from scratch in PyTorch
 - How the submodules of `torch`, like `torch.nn` and `torch.utils.data`, make writing performant neural network training and inference code easier
 
-### [Lab 02: PyTorch Lightning]()
+### [Lab 02: PyTorch Lightning](./labs/Lab02a-PyTorchLightning.ipynb)
+[PyTorch Lightning](https://github.com/Lightning-AI/lightning) is a designed to organize PyTorch code in a more intuitive and easy-to-read way, making deep learning experiments easier to reproduce. It is also a useful tool to create scalable deep learning models that can easily run on distributed hardware while keeping the models hardware agnostic.
+
+In this lab, we will learn:
+- The core components of a PyTorch Lightning training loop: `LightningModules` and `Trainers`.
+- Useful quality-of-life improvements offered by PyTorch Lightning: `LightningDataModules`, `Callbacks`, and `Metrics`
+- How we use these features in the FSDL codebase
 
 ## Project
 
