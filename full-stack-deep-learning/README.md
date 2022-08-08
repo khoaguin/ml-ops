@@ -28,8 +28,9 @@ In this lab, we will learn
 - How to write a basic neural network from scratch in PyTorch
 - How the submodules of `torch`, like `torch.nn` and `torch.utils.data`, make writing performant neural network training and inference code easier
 
+### [Lab 02: PyTorch Lightning]()
+
 ## Project
 
 ## Resources
 - https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2022-labs
-- 
