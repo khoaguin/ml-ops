@@ -16,6 +16,7 @@ As part of Full Stack Deep Learning 2022, we will incrementally develop a comple
 In the first lab, we go through the overview of the text recognizer app that demonstrates core principles and tools of an ML-powered application.
 
 ![text-recognizer-app](./images/text-recognizer-app.png)  
+![text-recognizer-app2](./images/text-recognizer-app2.png)  
 
 The diagram below shows the entire process and tools needed for training and running the text recognizer app. 
 
@@ -29,7 +30,7 @@ In this lab, we will learn
 - How the submodules of `torch`, like `torch.nn` and `torch.utils.data`, make writing performant neural network training and inference code easier
 
 ### [Lab 02: PyTorch Lightning](./labs/Lab02a-PyTorchLightning.ipynb)
-[PyTorch Lightning](https://github.com/Lightning-AI/lightning) is a designed to organize PyTorch code in a more intuitive and easy-to-read way, making deep learning experiments easier to reproduce. It is also a useful tool to create scalable deep learning models that can easily run on distributed hardware while keeping the models hardware agnostic.
+[`PyTorch Lightning`](https://github.com/Lightning-AI/lightning) is a designed to organize PyTorch code in a more intuitive and easy-to-read way, making deep learning experiments easier to reproduce. It is also a useful tool to create scalable deep learning models that can easily run on distributed hardware while keeping the models hardware agnostic.
 
 In this lab, we will learn:
 - The core components of a PyTorch Lightning training loop: `LightningModules` and `Trainers`.
