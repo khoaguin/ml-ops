@@ -37,10 +37,17 @@ In this lab, we will learn:
 - Useful quality-of-life improvements offered by PyTorch Lightning: `LightningDataModules`, `Callbacks`, and `Metrics`
 - How we use these features in the FSDL codebase
 
-### [Lab 02b: Training a CNN on Synthetic Handwriting Data]()
+### [Lab 02b: Training a CNN on Synthetic Handwriting Data](./labs/Lab02b-CNN.ipynb)
 In this lab, we will learn
 - Fundamental principles for building neural networks with convolutional components
-- How to use Lightning's training framework via a CLI
+- How to use Lightning's training framework via a command line interface (CLI) to train CNNs on EMNIST and EMNISTLines datasets.
+
+
+### [Lab 3: Transformers and Paragraphs](./labs/Lab02b-CNN.ipynb)
+In this lab, we will learn
+- The fundamental reasons why the Transformer is such a powerful and popular architecure
+- Core intuitions for the behavior of Transformer architectures
+- How to use a convolutional encoder and a Transformer decoder to recognize entire paragraphs of text
 
 ## Project
 
