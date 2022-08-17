@@ -11,7 +11,7 @@ There are many great courses on training deep learning models, but it is only on
 ## Labs
 ![labs-banner](./images/labs-banner.png)  
 
-As part of Full Stack Deep Learning 2022, we will incrementally develop a complete deep learning codebase through the labs to create and deploy a model that understands the content of hand-written paragraphs.
+As part of Full Stack Deep Learning 2022, we will incrementally develop a complete deep learning codebase through the labs to create and deploy a model that understands images of hand-written paragraphs and output the text in the images.
 
 ### [Lab 00: Overview](./labs/Lab00-Overview.ipynb) 
 In the first lab, we go through the overview of the text recognizer app that demonstrates core principles and tools of an ML-powered application.
