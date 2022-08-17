@@ -15,12 +15,15 @@ As part of Full Stack Deep Learning 2022, we will incrementally develop a comple
 
 ### [Lab 00: Overview](./labs/Lab00-Overview.ipynb) 
 In the first lab, we go through the overview of the text recognizer app that demonstrates core principles and tools of an ML-powered application.
+
 ![text-recognizer-app](./images/text-recognizer-app.png)  
 
 The figure below shows in more details how the app works.
+
 ![text-recognizer-app2](./images/text-recognizer-app2.png)  
 
 The diagram below shows the entire process, tools and frameworks needed to train and run the text recognizer app. 
+
 ![text-recognizer-app](./images/app-diagram.png)  
 
 ### [Lab 01: PyTorch](./labs/Lab01-PyTorch.ipynb)
