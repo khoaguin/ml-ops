@@ -6,3 +6,6 @@ from .line_cnn_simple import LineCNNSimple
 
 
 from .resnet_transformer import ResnetTransformer
+
+
+from .line_cnn_transformer import LineCNNTransformer

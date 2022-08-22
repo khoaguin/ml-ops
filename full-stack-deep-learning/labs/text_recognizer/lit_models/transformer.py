@@ -49,6 +49,10 @@ class TransformerLitModel(BaseImageToTextLitModel):
         self.log("train/loss", loss)
 
         outputs = {"loss": loss}
+        if self.is_logged_batch():
+            preds = self.get_preds(logits)
+            pred_strs, gt_strs = self.batchmap(preds), self.batchmap(y)
+            outputs.update({"pred_strs": pred_strs, "gt_strs": gt_strs})
 
         return outputs
 
@@ -67,6 +71,10 @@ class TransformerLitModel(BaseImageToTextLitModel):
         self.val_cer(preds, y)
         self.log("validation/cer", self.val_cer, prog_bar=True, sync_dist=True)
 
+        pred_strs, gt_strs = self.batchmap(preds), self.batchmap(y)
+        self.add_on_first_batch({"pred_strs": pred_strs, "gt_strs": gt_strs}, outputs, batch_idx)
+        self.add_on_first_batch({"logits": logits.detach()}, outputs, batch_idx)
+
         return outputs
 
     def test_step(self, batch, batch_idx):
@@ -83,6 +91,10 @@ class TransformerLitModel(BaseImageToTextLitModel):
         preds = self(x)
         self.val_cer(preds, y)
         self.log("test/cer", self.val_cer, prog_bar=True, sync_dist=True)
+
+        pred_strs, gt_strs = self.batchmap(preds), self.batchmap(y)
+        self.add_on_first_batch({"pred_strs": pred_strs, "gt_strs": gt_strs}, outputs, batch_idx)
+        self.add_on_first_batch({"logits": logits.detach()}, outputs, batch_idx)
 
         return outputs
 

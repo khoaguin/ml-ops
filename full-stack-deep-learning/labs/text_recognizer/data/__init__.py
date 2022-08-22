@@ -18,3 +18,6 @@ from .emnist_lines import EMNISTLines
 
 
 from .iam_paragraphs import IAMParagraphs
+
+
+from .iam_lines import IAMLines
