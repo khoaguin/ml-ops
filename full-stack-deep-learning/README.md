@@ -47,11 +47,23 @@ In this lab, we will learn
 - How to use Lightning's training framework via a command line interface (CLI) to train CNNs on EMNIST and EMNISTLines datasets.
 
 
-### [Lab 3: Transformers and Paragraphs](./labs/Lab02b-CNN.ipynb)
+### [Lab 03: Transformers and Paragraphs](./labs/Lab02b-CNN.ipynb)
 In this lab, we will learn
 - The fundamental reasons why the Transformer is such a powerful and popular architecure
 - Core intuitions for the behavior of Transformer architectures
 - How to use a convolutional encoder and a Transformer decoder to recognize entire paragraphs of text
+
+### [Lab 04: Experiment Management](./labs/Lab04-Experiments.ipynb)
+In this lab, we will learn
+- How experiment management brings observability to ML model development
+- Which features of experiment management we use in developing the Text Recognizer
+- Workflows for using [Weights & Biases](https://wandb.ai/site) in experiment management, including metric logging, artifact versioning, and hyperparameter optimization
+
+### [Lab 05: Troubleshooting & Testing](./labs/)
+In this lab, we will learn
+- Practices and tools for testing and linting Python code in general: `black`, [`flake8`](https://flake8.pycqa.org/en/latest/index.html), `precommit`, `pytests` and `doctests`
+How to implement tests for ML training systems in particular
+What a PyTorch training step looks like under the hood and how to troubleshoot performance bottlenecks
 
 ## Project
 
