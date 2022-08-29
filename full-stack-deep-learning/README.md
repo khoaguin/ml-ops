@@ -11,7 +11,7 @@ There are many great courses on training deep learning models, but it is only on
 ## Labs
 ![labs-banner](./images/labs-banner.png)  
 
-As part of Full Stack Deep Learning 2022, we will incrementally develop a complete deep learning codebase through the labs to create and deploy a model that understands images of hand-written paragraphs and outputs the text in the images.
+As part of Full Stack Deep Learning 2022, we will incrementally develop a complete deep learning codebase through the labs to create and deploy a model that understands images of hand-written paragraphs and outputs the text in the images. The labs can be run on Google Colab, and there are also accompanied walkthrough videos that you can find [here](https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2022-labs).
 
 ### [Lab 00: Overview](./labs/Lab00-Overview.ipynb) 
 In the first lab, we go through the overview of the text recognizer app that demonstrates core principles and tools of an ML-powered application.
@@ -61,11 +61,12 @@ In this lab, we will learn
 
 ### [Lab 05: Troubleshooting & Testing](./labs/)
 In this lab, we will learn
-- Practices and tools for testing and linting Python code in general: `black`, [`flake8`](https://flake8.pycqa.org/en/latest/index.html), `precommit`, `pytests` and `doctests`
-How to implement tests for ML training systems in particular
-What a PyTorch training step looks like under the hood and how to troubleshoot performance bottlenecks
+- Practices and tools for testing and linting Python code in general: [`black`](https://github.com/psf/black), [`flake8`](https://flake8.pycqa.org/en/latest/index.html), [`precommit`](https://pre-commit.com/), [`pytests`](https://docs.pytest.org/) and [`doctests`](https://docs.python.org/3/library/doctest.html)
+- How to implement tests for ML training systems in particular
+- What a PyTorch training step looks like under the hood and how to troubleshoot performance bottlenecks
 
 ## Project
 
 ## Resources
+- https://fullstackdeeplearning.com/course/2022/
 - https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2022-labs
