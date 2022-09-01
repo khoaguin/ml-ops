@@ -1,12 +1,18 @@
 # Full Stack Deep Learning 2022
-Welcome to my repo for the course [Full Stack Deep Learning (2022)](https://fullstackdeeplearning.com/course/). Here you will find my course notes, labs and the course project.
+Welcome to my repo for the course [Full Stack Deep Learning (2022)](https://fullstackdeeplearning.com/course/). Here you will find my notes, labs and project for the course.
+## Outline
+* [Course Overview](#course-overview-and-notes)
+* [Labs](#labs)
+* [Project](#project)
+* [Resources](#resources)
+***
 
-## Course Overview
+## Course Overview and Notes
 ![banner](./images/banner.png "course banner")
 
 There are many great courses on training deep learning models, but it is only one part of the deep learning stack. This course focuses on the other part of the stack, which is building and shipping ML-powered products.
 
-### [Course Notes](https://khoaguin.notion.site/Full-Stack-Deep-Learning-2022-UC-Berkeley-8c2b19cf721e453b86a3e20fd209c7c3)
+### [Course Notes (on Notion, in English)](https://khoaguin.notion.site/Full-Stack-Deep-Learning-2022-UC-Berkeley-8c2b19cf721e453b86a3e20fd209c7c3)
 
 ## Labs
 ![labs-banner](./images/labs-banner.png)  
