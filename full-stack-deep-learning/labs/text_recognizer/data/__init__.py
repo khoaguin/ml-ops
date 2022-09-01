@@ -21,3 +21,10 @@ from .iam_paragraphs import IAMParagraphs
 
 
 from .iam_lines import IAMLines
+
+
+from .fake_images import FakeImageData
+
+
+from .iam_synthetic_paragraphs import IAMSyntheticParagraphs
+from .iam_original_and_synthetic_paragraphs import IAMOriginalAndSyntheticParagraphs

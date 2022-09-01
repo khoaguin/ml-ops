@@ -36,6 +36,12 @@ def _setup_parser():
         help="If passed, logs experiment results to Weights & Biases. Otherwise logs only to local Tensorboard.",
     )
     parser.add_argument(
+        "--profile",
+        action="store_true",
+        default=False,
+        help="If passed, uses the PyTorch Profiler to track computation, exported as a Chrome-style trace.",
+    )
+    parser.add_argument(
         "--data_class",
         type=str,
         default="MNIST",
@@ -156,18 +162,29 @@ def main():
         callbacks.append(cb.ImageToTextLogger())
 
     trainer = pl.Trainer.from_argparse_args(args, callbacks=callbacks, logger=logger)
+    if args.profile:
+        sched = torch.profiler.schedule(wait=0, warmup=3, active=4, repeat=0)
+        profiler = pl.profiler.PyTorchProfiler(export_to_chrome=True, schedule=sched, dirpath=experiment_dir)
+        profiler.STEP_FUNCTIONS = {"training_step"}  # only profile training
+    else:
+        profiler = pl.profiler.PassThroughProfiler()
+
+    trainer.profiler = profiler
 
     trainer.tune(lit_model, datamodule=data)  # If passing --auto_lr_find, this will set learning rate
 
     trainer.fit(lit_model, datamodule=data)
 
-    trainer.test(lit_model, datamodule=data)
+    trainer.profiler = pl.profiler.PassThroughProfiler()  # turn profiling off during testing
 
     best_model_path = checkpoint_callback.best_model_path
     if best_model_path:
         rank_zero_info(f"Best model saved at: {best_model_path}")
         if args.wandb:
             rank_zero_info("Best model also uploaded to W&B ")
+        trainer.test(datamodule=data, ckpt_path=best_model_path)
+    else:
+        trainer.test(lit_model, datamodule=data)
 
 
 if __name__ == "__main__":

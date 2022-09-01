@@ -3,7 +3,7 @@ import argparse
 
 import pytorch_lightning as pl
 import torch
-from torchmetrics import Accuracy, MeanMetric
+from torchmetrics import Accuracy
 
 from .metrics import CharacterErrorRate
 
@@ -138,5 +138,3 @@ class BaseImageToTextLitModel(BaseLitModel):  # pylint: disable=too-many-ancesto
         self.ignore_tokens = [self.start_index, self.end_index, self.padding_index]
         self.val_cer = CharacterErrorRate(self.ignore_tokens)
         self.test_cer = CharacterErrorRate(self.ignore_tokens)
-        self.mean_metric = MeanMetric()
-        self.log("mean value: ", self.mean_metric(self.ignore_tokens))
