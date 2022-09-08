@@ -1,18 +1,18 @@
 # Full Stack Deep Learning 2022
 Welcome to my repo for the course [Full Stack Deep Learning (2022)](https://fullstackdeeplearning.com/course/). Here you will find my notes, labs and project for the course.
 ## Outline
-* [Course Overview](#course-overview-and-notes)
+* [Course Overview](#course-overview)
 * [Labs](#labs)
 * [Project](#project)
 * [Resources](#resources)
 ***
 
-## Course Overview and Notes
+## Course Overview
 ![banner](./images/banner.png "course banner")
 
 There are many great courses on training deep learning models, but it is only one part of the deep learning stack. This course focuses on the other part of the stack, which is building and shipping ML-powered products.
 
-### [Course Notes (on Notion, in English)](https://khoaguin.notion.site/Full-Stack-Deep-Learning-2022-UC-Berkeley-8c2b19cf721e453b86a3e20fd209c7c3)
+### [Notes on resources for the course and for MLOps in general](https://khoaguin.notion.site/Full-Stack-Deep-Learning-2022-UC-Berkeley-8c2b19cf721e453b86a3e20fd209c7c3)
 
 ## Labs
 ![labs-banner](./images/labs-banner.png)  
@@ -65,11 +65,17 @@ In this lab, we will learn
 - Which features of experiment management we use in developing the Text Recognizer
 - Workflows for using [Weights & Biases](https://wandb.ai/site) in experiment management, including metric logging, artifact versioning, and hyperparameter optimization
 
-### [Lab 05: Troubleshooting & Testing](./labs/)
+### [Lab 05: Troubleshooting & Testing](./labs/Lab05-Troubleshooting.ipynb)
 In this lab, we will learn
 - Practices and tools for testing and linting Python code in general: [`black`](https://github.com/psf/black), [`flake8`](https://flake8.pycqa.org/en/latest/index.html), [`precommit`](https://pre-commit.com/), [`pytests`](https://docs.pytest.org/) and [`doctests`](https://docs.python.org/3/library/doctest.html)
 - How to implement tests for ML training systems in particular
 - What a PyTorch training step looks like under the hood and how to troubleshoot performance bottlenecks
+
+### [Lab 07: Deployment]()
+In this lab, we will learn
+- How to convert PyTorch models into portable TorchScript binaries
+- How to use [Gradio](https://gradio.app/) to make a simple demo UI for your ML-powered applications
+- How to split out a model service from the frontend and spin up a publicly accessible application
 
 ## Project
 
