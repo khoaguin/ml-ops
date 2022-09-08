@@ -4,7 +4,7 @@
 * Integration with TensorFlow Data Validation (TFDV)
 * Store progress and create provisions to backtrack the experiment 
 
-**Lab 2 - Iterative Schema (`C2_W3_Lab_2_IterativeSchema.ipynb`)** In this lab, we review how to update an inferred schema and save the result to the metadata store used by TFX.
+**Lab 2 - Iterative Schema (`C2_W3_Lab_2_IterativeSchema.ipynb`)**: In this lab, we review how to update an inferred schema and save the result to the metadata store used by TFX.
 
 ## Requirements
 `tensorflow==2.6.0`  
