@@ -1,5 +1,5 @@
 # Full Stack Deep Learning 2022
-Welcome to my repo for the course [Full Stack Deep Learning (2022)](https://fullstackdeeplearning.com/course/). Here you will find my notes, labs and project for the course.
+Repo for the course [Full Stack Deep Learning (2022)](https://fullstackdeeplearning.com/course/).
 ## Outline
 * [Course Overview](#course-overview)
 * [Labs](#labs)
